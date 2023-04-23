@@ -1,0 +1,120 @@
+{
+    "associations": [
+        {
+            "name": "BDE",
+            "fullname": "Bureau des Etudiants",
+            "img": "https://app.its-tps.fr/logo/BDE.png"
+        },
+        {
+            "name": "BDA",
+            "fullname": "Bureau des Arts",
+            "img": "https://app.its-tps.fr/logo/BDA.png"
+        },
+        {
+            "name": "BDF",
+            "fullname": "Bureau des Fêtes",
+            "img": "https://app.its-tps.fr/logo/BDF.png"
+        },
+        {
+            "name": "BDH",
+            "fullname": "Bureau de l'Humanitaire",
+            "img": "https://app.its-tps.fr/logo/BDH.png"
+        },
+        {
+            "name": "BDM",
+            "fullname": "Bureau des Musiciens",
+            "img": "https://app.its-tps.fr/logo/BDM.png"
+        },
+        {
+            "name": "BDS",
+            "fullname": "Bureau des Sports",
+            "img": "https://app.its-tps.fr/logo/BDS.png"
+        },
+        {
+            "name": "PSI",
+            "fullname": "Physique Strasbourg Ingénierie",
+            "img": "https://app.its-tps.fr/logo/PSI.png"
+        },
+        {
+            "name": "RTS",
+            "fullname": "Robots Télécom Strasbourg",
+            "img": "https://app.its-tps.fr/logo/RTS.png"
+        },
+        {
+            "name": "Club Oenologie",
+            "img": "https://app.its-tps.fr/logo/Oeno.png"
+        },
+        {
+            "name": "MPS",
+            "fullname": "Media Physique Strasbourg",
+            "img": "https://app.its-tps.fr/logo/MPS.png"
+        },
+        {
+            "name": "ITS",
+            "fullname": "Informatique Telecom Strasbourg",
+            "img": "https://app.its-tps.fr/logo/ITS.png"
+        }
+    ],
+    "clubs": [
+        {
+            "name": "Club Astro",
+            "img": "https://app.its-tps.fr/logo/Astro.png"
+        },
+        {
+            "name": "Club Belote",
+            "img": "https://app.its-tps.fr/logo/Belote.png"
+        },
+        {
+            "name": "Club Brassage",
+            "img": "https://app.its-tps.fr/logo/Brassage.png"
+        },
+        {
+            "name": "Club Baby",
+            "img": "https://app.its-tps.fr/logo/Baby.png"
+        },
+        {
+            "name": "Club Ciné",
+            "img": "https://app.its-tps.fr/logo/Cine.png"
+        },
+        {
+            "name": "Club Kouisine",
+            "img": "https://app.its-tps.fr/logo/Cuisine.png"
+        },
+        {
+            "name": "Club Danse",
+            "img": "https://app.its-tps.fr/logo/Danse.png"
+        },
+        {
+            "name": "Club Echecs",
+            "img": "https://app.its-tps.fr/logo/Echecs.png"
+        },
+        {
+            "name": "Fatness",
+            "img": "https://app.its-tps.fr/logo/Fatness.png"
+        },
+        {
+            "name": "Gala",
+            "img": "https://app.its-tps.fr/logo/Gala.png"
+        },
+        {
+            "name": "Club Japanim",
+            "img": "https://app.its-tps.fr/logo/Japanim.png"
+        },
+        {
+            "name": "Club Montagne",
+            "img": "https://app.its-tps.fr/logo/Montagne.png"
+        },
+        {
+            "name": "Club Pompom",
+            "img": "https://app.its-tps.fr/logo/Pompom.png"
+        },
+        {
+            "name": "Club Rock",
+            "img": "https://app.its-tps.fr/logo/Rock.png"
+        },
+        {
+            "name": "Club Yu-Gi-Oh",
+            "img": "https://app.its-tps.fr/logo/Yugi.png"
+        }
+    ]
+}
