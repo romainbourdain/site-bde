@@ -45,7 +45,7 @@ const Navbar = ({ theme = navbarColors, currentPage }) => {
         <LinkContainer>
           {links.map((link, key) =>
             link.children ? (
-              <Menu name={link.name} children={link.children} />
+              <Menu name={link.name} children={link.children} key={key} />
             ) : (
               <StyledLink to={link.route.path} key={key}>
                 {link.name}
@@ -70,7 +70,7 @@ const Container = styled.nav`
   z-index: 10;
 `;
 
-const Logo = styled.nav`
+const Logo = styled.img`
   height: 86px;
   aspect-ratio: 1/1;
   margin: 10px 0;

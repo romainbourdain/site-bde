@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import routes from "../routes/routes";
-import ErreurImg from "../assets/img/erreur.jpg";
+import ErreurImg from "../assets/img/erreur.png";
 
 const Error = () => {
   return (
@@ -30,7 +30,9 @@ const Container = styled.div`
   gap: 15px;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  height: 500px;
+`;
 
 const Title = styled.h1`
   font-size: 2rem;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Menu = ({ name, children }) => {
   return (
-    <StyledLink>
+    <MenuLabel>
       <span>{name}</span>
       <StyledMenu>
         {children.map((child, key) => (
@@ -13,11 +13,11 @@ const Menu = ({ name, children }) => {
           </MenuLink>
         ))}
       </StyledMenu>
-    </StyledLink>
+    </MenuLabel>
   );
 };
 
-const StyledLink = styled(NavLink)`
+const MenuLabel = styled.span`
   position: relative;
   display: flex;
   align-items: center;
@@ -59,10 +59,6 @@ const MenuLink = styled(Link)`
 
   &:not(:last-child) {
     border-bottom: 3px solid #367cbc;
-  }
-
-  &:hover {
-    background-color: #367cbc;
   }
 
   &:hover {
