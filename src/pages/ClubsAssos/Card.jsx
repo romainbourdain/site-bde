@@ -1,50 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import Reveal from "../../animations/Reveal";
 
 const Card = ({ img, name, fullname }) => {
   return (
-    <Container>
-      <Logo src={img} alt={`logo-${name}`} />
-      <TextContainer>
-        <Name>{name}</Name>
-        <FullName>{fullname}</FullName>
-      </TextContainer>
-    </Container>
+    <Reveal>
+      <Container>
+        <Logo src={img} alt={`logo-${name}`} />
+        <TextContainer>
+          <Name>{name}</Name>
+          <FullName>{fullname}</FullName>
+        </TextContainer>
+      </Container>
+    </Reveal>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 20px;
-  gap: 30px;
-
-  width: 280px;
-
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  /* border-radius: 25px; */
-
-  cursor: pointer;
-  user-select: none;
-  transition: 0.2s ease-in-out;
-
-  &:hover {
-    img {
-      transform: scale(1.15);
-    }
-
-    h1 {
-      color: #f5a623;
-    }
-
-    h2 {
-      color: #ecc689;
-    }
-  }
-`;
 
 const TextContainer = styled.div`
   display: flex;
@@ -74,6 +44,39 @@ const FullName = styled.h2`
   font-size: 1.3rem;
   text-align: center;
   transition: 0.4s ease-in-out;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  gap: 30px;
+
+  width: 280px;
+  height: 100%;
+
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  background-color: white;
+
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    ${Logo} {
+      transform: scale(1.15);
+    }
+
+    ${Name} {
+      color: #f5a623;
+    }
+
+    ${FullName} {
+      color: #ecc689;
+    }
+  }
 `;
 
 export default Card;

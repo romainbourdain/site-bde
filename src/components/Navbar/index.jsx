@@ -1,20 +1,16 @@
 import React from "react";
-import routes from "../../routes/routes";
 import LogoBde from "../../assets/img/logo-bde.png";
 import styled, { ThemeProvider } from "styled-components";
 import navbarColors from "../../assets/colors/navbar";
 import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
+import routes from "../../routes/routes";
 
-const Navbar = ({ theme = navbarColors, currentPage }) => {
+const Navbar = ({ theme = navbarColors }) => {
   const links = [
     {
       name: "Accueil",
       route: routes.accueil,
-    },
-    {
-      name: "Présentation",
-      route: routes.presentation,
     },
     {
       name: "Clubs et Associations",
@@ -42,17 +38,17 @@ const Navbar = ({ theme = navbarColors, currentPage }) => {
     <ThemeProvider theme={theme}>
       <Container>
         <Logo src={LogoBde} alt="logo-bde" />
-        <LinkContainer>
+        <LinkList>
           {links.map((link, key) =>
             link.children ? (
               <Menu name={link.name} children={link.children} key={key} />
             ) : (
-              <StyledLink to={link.route.path} key={key}>
-                <span>{link.name}</span>
-              </StyledLink>
+              <LinkContainer to={link.route.path} key={key}>
+                <LinkLabel>{link.name}</LinkLabel>
+              </LinkContainer>
             )
           )}
-        </LinkContainer>
+        </LinkList>
         <div></div>
       </Container>
     </ThemeProvider>
@@ -77,41 +73,41 @@ const Logo = styled.img`
   margin: 10px 0;
 `;
 
-const LinkContainer = styled.div`
+const LinkList = styled.div`
   display: flex;
   font-weight: 600;
   font-size: 1.2rem;
   gap: 25px;
 `;
 
-const StyledLink = styled(NavLink)`
+const LinkLabel = styled.span`
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 0;
+  transition: 0.2s ease-in-out;
+  color: ${(props) => props.theme.text};
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: ${(props) => props.theme.selected};
+    transition: 0.2s ease-in-out;
+  }
+`;
+
+const LinkContainer = styled(NavLink)`
   display: flex;
   align-items: center;
 
-  span {
-    position: relative;
-    margin: 10px 0;
-    padding: 10px 0;
-    transition: 0.2s ease-in-out;
-    color: ${(props) => props.theme.text};
+  &:hover ${LinkLabel} {
+    color: ${(props) => props.theme.selected};
 
     &::after {
-      content: "";
-      position: absolute;
-      background-color: #fff;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      color: ${(props) => props.theme.selected};
-      transition: 0.2s ease-in-out;
-    }
-
-    &:hover {
-      color: ${(props) => props.theme.selected};
-
-      &::after {
-        background-color: ${(props) => props.theme.selected};
-      }
+      background-color: ${(props) => props.theme.selected};
     }
   }
 

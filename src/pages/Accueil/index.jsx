@@ -1,11 +1,10 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import routes from "../../routes/routes";
 
 const Home = () => {
   return (
     <>
-      <Navbar currentPage={routes.accueil.id} />
+      <Navbar />
       <div>Home</div>
     </>
   );

@@ -6,49 +6,21 @@ import styled from "styled-components";
 
 const Menu = ({ name, children }) => {
   return (
-    <MenuLabel>
-      <span className="label">
+    <MenuLink>
+      <MenuLabel className="label">
         {name}
         <FontAwesomeIcon icon={faCaretDown} />
-      </span>
+      </MenuLabel>
       <StyledMenu>
         {children.map((child, key) => (
-          <MenuLink key={key} to={child.route.path}>
-            <span className="link">{child.name}</span>
-          </MenuLink>
+          <LinkContainer key={key} to={child.route.path}>
+            <LinkLabel className="link">{child.name}</LinkLabel>
+          </LinkContainer>
         ))}
       </StyledMenu>
-    </MenuLabel>
+    </MenuLink>
   );
 };
-
-const MenuLabel = styled.span`
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: ${(props) => props.theme.background};
-
-  .label {
-    padding: 10px;
-    transition: all 0.2s ease-in-out, border-radius 0.5s ease-in;
-    border-radius: 2px;
-    color: ${(props) => props.theme.text};
-    display: flex;
-    gap: 10px;
-  }
-
-  &:hover {
-    .label {
-      background-color: ${(props) => props.theme.selected};
-      border-radius: 15px;
-    }
-
-    ul {
-      transform: translateY(100%);
-      opacity: 1;
-    }
-  }
-`;
 
 const StyledMenu = styled.ul`
   position: absolute;
@@ -59,27 +31,53 @@ const StyledMenu = styled.ul`
   opacity: 0;
   transition: 0.2s ease-in-out;
   z-index: -1;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 15px 15px;
 `;
 
-const MenuLink = styled(Link)`
+const LinkLabel = styled.span`
+  padding: 10px;
+  background-color: transparent;
+  color: ${(props) => props.theme.text};
+  transition: 0.2s ease-in-out;
+`;
+
+const LinkContainer = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.2s ease-in-out;
-  height: 60px;
-  border-top: 1px solid #fff;
+  height: 50px;
+  border-bottom: 1px solid #fff;
 
-  .link {
-    padding: 10px;
-    background-color: transparent;
-    color: ${(props) => props.theme.text};
-    transition: 0.2s ease-in-out;
+  &:hover ${LinkLabel} {
+    color: ${(props) => props.theme.selected};
   }
+`;
+
+const MenuLabel = styled.span`
+  padding: 10px;
+  transition: all 0.2s ease-in-out, border-radius 0.5s ease-in;
+  border-radius: 2px;
+  color: ${(props) => props.theme.text};
+  display: flex;
+  gap: 10px;
+`;
+
+const MenuLink = styled.span`
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: ${(props) => props.theme.background};
 
   &:hover {
-    .link {
-      color: ${(props) => props.theme.selected};
+    ${MenuLabel} {
+      background-color: ${(props) => props.theme.selected};
+      border-radius: 15px;
+    }
+
+    ${StyledMenu} {
+      transform: translateY(100%);
+      opacity: 1;
     }
   }
 `;

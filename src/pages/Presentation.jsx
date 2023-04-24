@@ -1,12 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import routes from "../routes/routes";
 import presentationText from "../assets/text/presentation";
 
 const Presentation = () => {
   return (
     <>
-      <Navbar currentPage={routes.presentation.id} />
+      <Navbar />
       <section>
         <h1>{presentationText.headSection.title}</h1>
         <p>{presentationText.headSection.description}</p>

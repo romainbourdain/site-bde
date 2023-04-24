@@ -27,19 +27,19 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   padding: 50px 30px;
-  gap: 15px;
+  gap: 10px;
 `;
 
 const Image = styled.img`
-  height: 500px;
+  height: 400px;
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
+  font-size: 1.7rem;
 `;
 
 const StyledLink = styled(Link)`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: underline;
   color: #3c29e4;
 `;

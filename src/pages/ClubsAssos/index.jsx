@@ -1,5 +1,4 @@
 import React from "react";
-import routes from "../../routes/routes";
 import Navbar from "../../components/Navbar";
 import data from "../../data/clubs-assos.json";
 import OrganisationText from "../../assets/text/Organisations";
@@ -9,7 +8,7 @@ import styled from "styled-components";
 const ClubsAssos = () => {
   return (
     <>
-      <Navbar currentPage={routes.clubsAssos.id} />
+      <Navbar />
       <Container>
         <Titre>{OrganisationText.associationTitle}</Titre>
         <Grid>
