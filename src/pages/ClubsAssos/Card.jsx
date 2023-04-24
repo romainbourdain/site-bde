@@ -18,14 +18,14 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 30px;
-  gap: 40px;
+  padding: 30px 20px;
+  gap: 30px;
 
-  width: 330px;
+  width: 280px;
 
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
   background-color: white;
-  border-radius: 25px;
+  /* border-radius: 25px; */
 
   cursor: pointer;
   user-select: none;
@@ -55,8 +55,8 @@ const TextContainer = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  aspect-ratio: 1/1;
   object-fit: contain;
   transition: 0.4s ease-in-out;
   -webkit-user-drag: none;
@@ -64,14 +64,14 @@ const Logo = styled.img`
 
 const Name = styled.h1`
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.7rem;
   transition: 0.4s ease-in-out;
 `;
 
 const FullName = styled.h2`
   color: #929292;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   transition: 0.4s ease-in-out;
 `;

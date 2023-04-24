@@ -47,7 +47,7 @@ const Grid = styled.div`
   flex-wrap: wrap;
 
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
   margin-bottom: 150px;
   -webkit-user-drag: none;
 `;

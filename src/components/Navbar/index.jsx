@@ -66,12 +66,12 @@ const Container = styled.nav`
   justify-content: space-between;
   align-items: stretch;
   background-color: ${(props) => props.theme.background};
-  padding: 0 50px;
+  padding: 0 30px;
   z-index: 10;
 `;
 
 const Logo = styled.img`
-  height: 86px;
+  height: 66px;
   aspect-ratio: 1/1;
   margin: 10px 0;
 `;
@@ -79,7 +79,7 @@ const Logo = styled.img`
 const LinkContainer = styled.div`
   display: flex;
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 `;
 
 const StyledLink = styled(NavLink)`
@@ -100,7 +100,7 @@ const StyledLink = styled(NavLink)`
       bottom: 0;
       display: block;
       width: 100%;
-      height: 10px;
+      height: 5px;
       background-color: ${(props) => props.theme.selected};
     }
   }

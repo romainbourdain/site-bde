@@ -52,13 +52,12 @@ const MenuLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 25px;
   transition: 0.2s ease-in-out;
   color: ${(props) => props.theme.text};
-  padding: 30px 10px;
+  padding: 20px 10px;
 
   &:not(:last-child) {
-    border-bottom: 3px solid #367cbc;
+    border-bottom: 1px solid #367cbc;
   }
 
   &:hover {
