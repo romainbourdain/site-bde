@@ -1,15 +1,20 @@
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Menu = ({ name, children }) => {
   return (
     <MenuLabel>
-      <span>{name}</span>
+      <span className="label">
+        {name}
+        <FontAwesomeIcon icon={faCaretDown} />
+      </span>
       <StyledMenu>
         {children.map((child, key) => (
           <MenuLink key={key} to={child.route.path}>
-            {child.name}
+            <span className="link">{child.name}</span>
           </MenuLink>
         ))}
       </StyledMenu>
@@ -21,13 +26,22 @@ const MenuLabel = styled.span`
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 25px;
-  transition: 0.2s ease-in-out;
-  color: ${(props) => props.theme.text};
+  background-color: ${(props) => props.theme.background};
+
+  .label {
+    padding: 10px;
+    transition: all 0.2s ease-in-out, border-radius 0.5s ease-in;
+    border-radius: 2px;
+    color: ${(props) => props.theme.text};
+    display: flex;
+    gap: 10px;
+  }
 
   &:hover {
-    background-color: ${(props) => props.theme.selected};
-    color: ${(props) => props.theme.textSelected};
+    .label {
+      background-color: ${(props) => props.theme.selected};
+      border-radius: 15px;
+    }
 
     ul {
       transform: translateY(100%);
@@ -40,29 +54,33 @@ const StyledMenu = styled.ul`
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: ${(props) => props.theme.background};
   width: 100%;
   opacity: 0;
   transition: 0.2s ease-in-out;
   z-index: -1;
+  border-radius: 0 0 20px 20px;
 `;
 
 const MenuLink = styled(Link)`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.2s ease-in-out;
-  color: ${(props) => props.theme.text};
-  padding: 20px 10px;
+  height: 60px;
+  border-top: 1px solid #fff;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid #367cbc;
+  .link {
+    padding: 10px;
+    background-color: transparent;
+    color: ${(props) => props.theme.text};
+    transition: 0.2s ease-in-out;
   }
 
   &:hover {
-    background-color: ${(props) => props.theme.selected};
-    color: ${(props) => props.theme.textSelected};
+    .link {
+      color: ${(props) => props.theme.selected};
+    }
   }
 `;
 

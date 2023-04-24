@@ -48,7 +48,7 @@ const Navbar = ({ theme = navbarColors, currentPage }) => {
               <Menu name={link.name} children={link.children} key={key} />
             ) : (
               <StyledLink to={link.route.path} key={key}>
-                {link.name}
+                <span>{link.name}</span>
               </StyledLink>
             )
           )}
@@ -60,18 +60,19 @@ const Navbar = ({ theme = navbarColors, currentPage }) => {
 };
 
 const Container = styled.nav`
-  position: relative;
+  position: fixed;
+  top: 0;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: stretch;
   background-color: ${(props) => props.theme.background};
-  padding: 0 30px;
+  padding: 0 1rem;
   z-index: 10;
 `;
 
 const Logo = styled.img`
-  height: 66px;
+  height: 50px;
   aspect-ratio: 1/1;
   margin: 10px 0;
 `;
@@ -79,35 +80,43 @@ const Logo = styled.img`
 const LinkContainer = styled.div`
   display: flex;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  gap: 25px;
 `;
 
 const StyledLink = styled(NavLink)`
-  position: relative;
   display: flex;
   align-items: center;
-  padding: 0 25px;
-  transition: 0.2s ease-in-out;
-  color: ${(props) => props.theme.text};
 
-  &.active {
-    color: ${(props) => props.theme.selected};
+  span {
+    position: relative;
+    margin: 10px 0;
+    padding: 10px 0;
+    transition: 0.2s ease-in-out;
+    color: ${(props) => props.theme.text};
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
-      left: 0;
-      bottom: 0;
-      display: block;
+      background-color: #fff;
       width: 100%;
-      height: 5px;
-      background-color: ${(props) => props.theme.selected};
+      bottom: 0;
+      left: 0;
+      color: ${(props) => props.theme.selected};
+      transition: 0.2s ease-in-out;
+    }
+
+    &:hover {
+      color: ${(props) => props.theme.selected};
+
+      &::after {
+        background-color: ${(props) => props.theme.selected};
+      }
     }
   }
 
-  &:hover {
-    background-color: ${(props) => props.theme.selected};
-    color: ${(props) => props.theme.textSelected};
+  &.active span::after {
+    height: 1px;
   }
 `;
 
