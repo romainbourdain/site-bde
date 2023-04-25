@@ -5,6 +5,7 @@ const navbarColors = {
   background: "#191919",
   selected: globalColors.primary,
   textSelected: "#FFFFFF",
+  menu: "rgba(0, 0, 0, 0.8)",
 };
 
 export default navbarColors;

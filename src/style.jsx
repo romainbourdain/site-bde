@@ -11,7 +11,6 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${({ theme }) => theme.background};
         color: ${({ theme }) => theme.text};
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
-        padding-top: 60px;
     }
 
     a {

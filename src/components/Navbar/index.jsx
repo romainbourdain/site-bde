@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
 import routes from "../../routes/routes";
 
-const Navbar = ({ theme = navbarColors }) => {
+const Navbar = ({ color }) => {
   const links = [
     {
       name: "Accueil",
@@ -34,10 +34,20 @@ const Navbar = ({ theme = navbarColors }) => {
       ],
     },
   ];
+  const theme = { ...navbarColors };
+
+  if (color == "transparent") {
+    theme.background = "transparent";
+    theme.menu = "rgba(0, 0, 0, 0.5)";
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Logo src={LogoBde} alt="logo-bde" />
+        <LogoContainer>
+          <Logo src={LogoBde} alt="logo-bde" />
+          <LogoTitle>BDE</LogoTitle>
+        </LogoContainer>
         <LinkList>
           {links.map((link, key) =>
             link.children ? (
@@ -65,6 +75,20 @@ const Container = styled.nav`
   background-color: ${(props) => props.theme.background};
   padding: 0 1rem;
   z-index: 10;
+  transition: 0.2s ease-in-out;
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+`;
+
+const LogoTitle = styled.span`
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: ${(props) => props.theme.text};
 `;
 
 const Logo = styled.img`

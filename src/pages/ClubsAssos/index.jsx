@@ -38,7 +38,7 @@ const ClubsAssos = () => {
 };
 
 const Container = styled.div`
-  margin: 0 110px;
+  margin: 110px 110px;
 `;
 
 const Grid = styled.div`
