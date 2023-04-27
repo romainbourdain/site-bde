@@ -1,43 +1,22 @@
-import { faPeopleGroup, faUserCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 
-const Numbers = () => {
+const Figure = ({ icon, number, label }) => {
   return (
     <Container>
-      <NumberColumn>
-        <IconBox>
-          <FontAwesomeIcon icon={faUserCheck} />
-        </IconBox>
-        <NumberContainer>
-          <Number>400</Number>
-          <Label>Adhérent</Label>
-        </NumberContainer>
-      </NumberColumn>
-      <NumberColumn>
-        <IconBox>
-          <FontAwesomeIcon icon={faPeopleGroup} />
-        </IconBox>
-        <NumberContainer>
-          <Number>43</Number>
-          <Label>Clubs / Associations</Label>
-        </NumberContainer>
-      </NumberColumn>
+      <IconBox>
+        <FontAwesomeIcon icon={icon} />
+      </IconBox>
+      <NumberContainer>
+        <Number>{number}</Number>
+        <Label>{label}</Label>
+      </NumberContainer>
     </Container>
   );
 };
 
 const Container = styled.div`
-  width: 100%;
-  background-color: #367cbc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 70px 30%;
-`;
-
-const NumberColumn = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -76,4 +55,4 @@ const Label = styled.span`
   font-size: 2rem;
 `;
 
-export default Numbers;
+export default Figure;
