@@ -11,7 +11,7 @@ const Text = ({ imagePos, src, alt, children }) => {
       <Container>
         <TextContainer>
           {childrenArray.map((child, key) => (
-            <Reveal key={key} delay={`.${key}s`}>
+            <Reveal key={key} delay=".1s">
               {child}
             </Reveal>
           ))}
@@ -29,9 +29,7 @@ const Text = ({ imagePos, src, alt, children }) => {
         </RevealLeft>
         <TextContainer>
           {childrenArray.map((child, key) => (
-            <Reveal key={key} delay={`.${key + 1}s`}>
-              {child}
-            </Reveal>
+            <Reveal key={key}>{child}</Reveal>
           ))}
         </TextContainer>
       </Container>

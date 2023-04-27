@@ -4,6 +4,7 @@ import data from "../../data/clubs-assos.json";
 import OrganisationText from "../../assets/text/Organisations";
 import Card from "./Card";
 import styled from "styled-components";
+import Footer from "../../components/Footer";
 
 const ClubsAssos = () => {
   return (
@@ -32,6 +33,7 @@ const ClubsAssos = () => {
             />
           ))}
         </Grid>
+        <Footer />
       </Container>
     </>
   );

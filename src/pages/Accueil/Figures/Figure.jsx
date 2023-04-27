@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
+import Counter from "./Counter";
 
 const Figure = ({ icon, number, label }) => {
   return (
@@ -8,10 +9,7 @@ const Figure = ({ icon, number, label }) => {
       <IconBox>
         <FontAwesomeIcon icon={icon} />
       </IconBox>
-      <NumberContainer>
-        <Number>{number}</Number>
-        <Label>{label}</Label>
-      </NumberContainer>
+      <Counter max={number} label={label} />
     </Container>
   );
 };
@@ -37,22 +35,6 @@ const IconBox = styled.div`
   border-radius: 100%;
   color: #191919;
   font-size: 4rem;
-`;
-
-const NumberContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-`;
-
-const Number = styled.span`
-  font-weight: 700;
-  font-size: 2.7rem;
-`;
-
-const Label = styled.span`
-  font-size: 2rem;
 `;
 
 export default Figure;

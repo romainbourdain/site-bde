@@ -6,6 +6,8 @@ import navbarColors from "../../assets/colors/navbar";
 import Presentation from "./Presentation";
 import Figures from "./Figures";
 import Trombinoscope from "./Trombinoscope";
+import Partenaires from "./Partenaires";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
@@ -39,6 +41,8 @@ const Home = () => {
         </div>
         <Figures />
         <Trombinoscope />
+        <Partenaires />
+        <Footer />
       </Container>
     </>
   );

@@ -36,7 +36,7 @@ const Navbar = ({ color }) => {
   ];
   const theme = { ...navbarColors };
 
-  if (color == "transparent") {
+  if (color === "transparent") {
     theme.background = "transparent";
     theme.menu = "rgba(0, 0, 0, 0.5)";
   }

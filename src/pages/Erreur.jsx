@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import routes from "../routes/routes";
 import ErreurImg from "../assets/img/erreur.png";
+import Footer from "../components/Footer";
 
 const Error = () => {
   return (
@@ -16,6 +17,7 @@ const Error = () => {
           Revenir à la page d'accueil
         </StyledLink>
       </Container>
+      <Footer />
     </>
   );
 };
@@ -28,6 +30,7 @@ const Container = styled.div`
   width: 100%;
   padding: 50px 30px;
   gap: 10px;
+  height: 100vh;
 `;
 
 const Image = styled.img`

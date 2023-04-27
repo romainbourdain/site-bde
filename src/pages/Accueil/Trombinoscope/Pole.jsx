@@ -5,8 +5,8 @@ const Pole = ({ titles, children }) => {
   return (
     <Container>
       <TitleContainer>
-        {titles.map((title) => (
-          <Title>{title}</Title>
+        {titles.map((title, key) => (
+          <Title key={key}>{title}</Title>
         ))}
       </TitleContainer>
       <Wrapper numCol={Children.count(children)}>{children}</Wrapper>
