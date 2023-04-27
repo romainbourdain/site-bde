@@ -6,7 +6,7 @@ const Reveal = ({ children, delay = 0 }) => {
   const { ref, inView } = useInView({
     root: null,
     rootMargin: "0px",
-    threshold: 0.1,
+    threshold: 0.01,
   });
   return (
     <Container
@@ -22,7 +22,7 @@ const Reveal = ({ children, delay = 0 }) => {
 const Container = styled.div`
   &.reveal {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 
   &.reveal-visible {

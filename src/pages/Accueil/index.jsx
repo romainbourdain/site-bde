@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Header from "./Header";
 import styled from "styled-components";
 import navbarColors from "../../assets/colors/navbar";
+import Presentation from "./Presentation";
+import Numbers from "./Numbers";
 
 const Home = () => {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
 
   const changeBackground = () => {
-    if (window.scrollY >= 0.9 * window.innerHeight) {
+    if (window.scrollY >= 150) {
       setTransparentNavbar(false);
     } else {
       setTransparentNavbar(true);
@@ -19,13 +21,22 @@ const Home = () => {
     window.addEventListener("scroll", changeBackground);
     return () => window.removeEventListener("scroll", changeBackground);
   }, []);
+
+  const presentationRef = useRef(null);
+  const scroll = () =>
+    presentationRef.current?.scrollIntoView({ behavior: "smooth" });
+
   return (
     <>
       <Navbar
         color={transparentNavbar ? "transparent" : navbarColors.background}
       />
       <Container>
-        <Header />
+        <Header scroll={scroll} />
+        <div ref={presentationRef}>
+          <Presentation />
+        </div>
+        <Numbers />
       </Container>
     </>
   );

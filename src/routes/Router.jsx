@@ -1,17 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import routes from "./routes";
 
-const Router = ({ children }) => {
+const Router = () => {
   return (
-    <BrowserRouter>
-      {children}
-      <Routes>
-        {Object.values(routes).map((route, key) => (
-          <Route path={route.path} element={route.element} key={key} />
-        ))}
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      {Object.values(routes).map((route, key) => (
+        <Route path={route.path} element={route.element} key={key} />
+      ))}
+    </Routes>
   );
 };
 

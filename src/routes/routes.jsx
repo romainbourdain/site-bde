@@ -1,18 +1,11 @@
 import Accueil from "../pages/Accueil";
 import Erreur from "../pages/Erreur";
 import ClubsAssos from "../pages/ClubsAssos";
-import Presentation from "../pages/Presentation";
-
 const routes = {
   accueil: {
     id: "accueil",
     path: "/",
     element: <Accueil />,
-  },
-  presentation: {
-    id: "presentation",
-    path: "/presentation",
-    element: <Presentation />,
   },
   clubsAssos: {
     id: "clubs-assos",

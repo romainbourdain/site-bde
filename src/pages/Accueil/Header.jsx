@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import background from "../../assets/img/home-background.png";
+import background from "../../assets/img/home/background.png";
 import { getTime } from "../../utils/time";
 import Reveal from "../../animations/Reveal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import Button from "../../components/Buttons/Button";
+import Loader from "../../animations/Loader";
 
-const Header = () => {
+const Header = ({ scroll }) => {
   const [countdown, setCountdown] = useState({
     days: "--",
     hours: "--",
@@ -22,7 +26,7 @@ const Header = () => {
 
   return (
     <Container>
-      {countdown.days !== "--" && (
+      {countdown.days !== "--" ? (
         <>
           <Title>Début de l'intégration dans</Title>
 
@@ -56,7 +60,12 @@ const Header = () => {
               </CountdownUnit>
             </Reveal>
           </Grid>
+          <Button onClick={scroll}>
+            Découvrir le BDE <FontAwesomeIcon icon={faArrowDown} />
+          </Button>
         </>
+      ) : (
+        <Loader />
       )}
     </Container>
   );
