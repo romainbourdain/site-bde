@@ -46,6 +46,13 @@ const Container = styled.div`
   gap: 50px;
   margin-top: 50px;
   padding: 110px 110px;
+
+  @media (max-width: 1100px) {
+    padding: 80px 50px;
+    ${Title1} {
+      font-size: 2.3rem;
+    }
+  }
 `;
 
 const Grid = styled.div`

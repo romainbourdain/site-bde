@@ -30,13 +30,30 @@ const Logo = styled.img`
   object-fit: contain;
   transition: 0.4s ease-in-out;
   -webkit-user-drag: none;
+
+  @media (max-width: 1100px) {
+    width: 100px;
+  }
+
+  @media (max-width: 750px) {
+    width: 75px;
+  }
 `;
 
 const Name = styled.h1`
   font-weight: 700;
+  text-align: center;
   font-size: 1.7rem;
   transition: 0.4s ease-in-out;
   color: ${(props) => props.theme.textDark};
+
+  @media (max-width: 1100px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 1rem;
+  }
 `;
 
 const FullName = styled.h2`
@@ -45,6 +62,14 @@ const FullName = styled.h2`
   font-size: 1.3rem;
   text-align: center;
   transition: 0.4s ease-in-out;
+
+  @media (max-width: 1100px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const Container = styled.div`
@@ -56,7 +81,7 @@ const Container = styled.div`
   gap: 30px;
 
   width: 280px;
-  height: 100%;
+  height: 280px;
 
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
   background-color: ${(props) => props.theme.backgroundLighter};
@@ -77,6 +102,18 @@ const Container = styled.div`
     ${FullName} {
       color: ${(props) => props.theme.primary};
     }
+  }
+
+  @media (max-width: 1100px) {
+    width: 200px;
+    height: 200px;
+    gap: 15px;
+  }
+
+  @media (max-width: 750px) {
+    width: 150px;
+    height: 150px;
+    gap: 10px;
   }
 `;
 
