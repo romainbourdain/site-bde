@@ -1,12 +1,13 @@
 import React, { Children } from "react";
 import styled from "styled-components";
+import Title2 from "../../../components/Titles/Title2";
 
-const Pole = ({ titles, children }) => {
+const Section = ({ titles, children }) => {
   return (
     <Container>
       <TitleContainer>
         {titles.map((title, key) => (
-          <Title key={key}>{title}</Title>
+          <Title2 key={key}>{title}</Title2>
         ))}
       </TitleContainer>
       <Wrapper numCol={Children.count(children)}>{children}</Wrapper>
@@ -24,11 +25,6 @@ const TitleContainer = styled.div`
   justify-content: space-around;
 `;
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 600;
-`;
-
 const Wrapper = styled.div`
   margin-top: 30px;
   display: grid;
@@ -38,4 +34,4 @@ const Wrapper = styled.div`
   gap: 100px;
 `;
 
-export default Pole;
+export default Section;

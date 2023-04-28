@@ -8,14 +8,14 @@ const GlobalStyle = createGlobalStyle`
     }
     
     body {
-        background-color: ${({ theme }) => theme.background};
-        color: ${({ theme }) => theme.text};
+        background-color: ${({ theme }) => theme.backgroundLight};
+        color: ${({ theme }) => theme.textDark};
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
     }
 
     a {
         text-decoration: none;
-        color: ${({ theme }) => theme.text};
+        color: ${({ theme }) => theme.textDark};
     }
 
     li {

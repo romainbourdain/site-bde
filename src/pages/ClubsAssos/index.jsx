@@ -1,17 +1,18 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import data from "../../data/clubs-assos.json";
-import OrganisationText from "../../assets/text/Organisations";
+import clubsAssosText from "../../assets/text/clubs-assos";
 import Card from "./Card";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
+import Title1 from "../../components/Titles/Title1";
 
 const ClubsAssos = () => {
   return (
     <>
       <Navbar />
       <Container>
-        <Titre>{OrganisationText.associationTitle}</Titre>
+        <Title1>{clubsAssosText.associationTitle}</Title1>
         <Grid>
           {data.associations.map((association, key) => (
             <Card
@@ -22,7 +23,7 @@ const ClubsAssos = () => {
             />
           ))}
         </Grid>
-        <Titre>{OrganisationText.clubsTitle}</Titre>
+        <Title1>{clubsAssosText.clubsTitle}</Title1>
         <Grid>
           {data.clubs.map((club, key) => (
             <Card
@@ -33,31 +34,27 @@ const ClubsAssos = () => {
             />
           ))}
         </Grid>
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 };
 
 const Container = styled.div`
-  margin: 110px 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+  padding: 110px 110px;
 `;
 
 const Grid = styled.div`
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   gap: 20px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   -webkit-user-drag: none;
-`;
-
-const Titre = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin: 70px 0;
 `;
 
 export default ClubsAssos;

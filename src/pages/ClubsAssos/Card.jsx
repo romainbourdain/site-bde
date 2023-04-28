@@ -36,10 +36,11 @@ const Name = styled.h1`
   font-weight: 700;
   font-size: 1.7rem;
   transition: 0.4s ease-in-out;
+  color: ${(props) => props.theme.textDark};
 `;
 
 const FullName = styled.h2`
-  color: #929292;
+  color: ${(props) => props.theme.textDarkSecondary};
   font-weight: 600;
   font-size: 1.3rem;
   text-align: center;
@@ -58,7 +59,7 @@ const Container = styled.div`
   height: 100%;
 
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: ${(props) => props.theme.backgroundLighter};
 
   cursor: pointer;
   user-select: none;
@@ -70,11 +71,11 @@ const Container = styled.div`
     }
 
     ${Name} {
-      color: #f5a623;
+      color: ${(props) => props.theme.primaryDark};
     }
 
     ${FullName} {
-      color: #ecc689;
+      color: ${(props) => props.theme.primary};
     }
   }
 `;

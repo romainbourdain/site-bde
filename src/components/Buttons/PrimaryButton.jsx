@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ children, onClick }) => {
+const PrimaryButton = ({ children, onClick }) => {
   return <StyledButton onClick={onClick}>{children}</StyledButton>;
 };
 
@@ -15,11 +15,11 @@ const StyledButton = styled.button`
   background-color: ${(props) => props.theme.primary};
   border: none;
   border-radius: 50px;
-  color: #fff;
+  color: ${(props) => props.theme.textLight};
   cursor: pointer;
   transition: 0.2s ease-in-out;
   &:hover {
-    background-color: #4e4e4e;
+    background-color: ${(props) => props.theme.primaryDark};
   }
 
   svg {
@@ -27,4 +27,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export default Button;
+export default PrimaryButton;

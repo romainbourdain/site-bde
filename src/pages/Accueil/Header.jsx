@@ -5,8 +5,9 @@ import { getTime } from "../../utils/time";
 import Reveal from "../../animations/Reveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import Button from "../../components/Buttons/Button";
+import PrimaryButton from "../../components/Buttons/PrimaryButton";
 import Loader from "../../animations/Loader";
+import accueilText from "../../assets/text/accueil";
 
 const Header = ({ scroll }) => {
   const [countdown, setCountdown] = useState({
@@ -28,41 +29,23 @@ const Header = ({ scroll }) => {
     <Container>
       {countdown.days !== "--" ? (
         <>
-          <Title>Début de l'intégration dans</Title>
+          <Title>{accueilText.header.title}</Title>
 
           <Grid>
-            <Reveal>
-              <Countdown>{countdown?.days}</Countdown>
-            </Reveal>
-            <Reveal delay=".1s">
-              <Countdown>{countdown?.hours}</Countdown>
-            </Reveal>
-            <Reveal delay=".2s">
-              <Countdown>{countdown?.minutes}</Countdown>
-            </Reveal>
-            <Reveal delay=".3s">
-              <Countdown>{countdown?.seconds}</Countdown>
-            </Reveal>
-            <Reveal>
-              <CountdownUnit>Jour{countdown?.days > 1 && "s"}</CountdownUnit>
-            </Reveal>
-            <Reveal delay=".1s">
-              <CountdownUnit>Heure{countdown?.hours > 1 && "s"}</CountdownUnit>
-            </Reveal>
-            <Reveal delay=".2s">
-              <CountdownUnit>
-                Minute{countdown?.minutes > 1 && "s"}
-              </CountdownUnit>
-            </Reveal>
-            <Reveal delay=".3s">
-              <CountdownUnit>
-                Seconde{countdown?.seconds > 1 && "s"}
-              </CountdownUnit>
-            </Reveal>
+            {Object.values(countdown).map((value, index) => (
+              <Reveal key={index} delay={`${index * 0.1}s`}>
+                <Countdown>{value}</Countdown>
+              </Reveal>
+            ))}
+            {accueilText.header.units.map((unit, index) => (
+              <Reveal key={index} delay={`${index * 0.1}s`}>
+                <CountdownUnit>{unit}</CountdownUnit>
+              </Reveal>
+            ))}
           </Grid>
-          <Button onClick={scroll}>
-            Découvrir le BDE <FontAwesomeIcon icon={faArrowDown} />
-          </Button>
+          <PrimaryButton onClick={scroll}>
+            {accueilText.header.button} <FontAwesomeIcon icon={faArrowDown} />
+          </PrimaryButton>
         </>
       ) : (
         <Loader />
@@ -95,14 +78,14 @@ const Grid = styled.div`
   text-align: center;
   gap: 10px 60px;
   font-weight: 700;
-  color: #fff;
+  color: ${(props) => props.theme.textLight};
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `;
 
 const Title = styled.h1`
   font-size: 3.7rem;
   font-weight: 700;
-  color: #fff;
+  color: ${(props) => props.theme.textLight};
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `;
 

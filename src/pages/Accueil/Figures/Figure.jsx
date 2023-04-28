@@ -20,7 +20,7 @@ const Container = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: ${(props) => props.theme.textLight};
   flex: 1;
   gap: 20px;
 `;
@@ -28,12 +28,12 @@ const Container = styled.div`
 const IconBox = styled.div`
   width: 150px;
   height: 150px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.textLight};
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  color: #191919;
+  color: ${(props) => props.theme.textDark};
   font-size: 4rem;
 `;
 

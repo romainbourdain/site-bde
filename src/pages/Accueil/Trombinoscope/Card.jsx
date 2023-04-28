@@ -28,7 +28,7 @@ const Hover = styled.div`
     rgba(0, 0, 0, 0.336) 0%,
     rgba(0, 0, 0, 0.8) 100%
   );
-  color: #fff;
+  color: ${(props) => props.theme.textLight};
   padding: 30px;
   opacity: 0;
   transition: all 0.3s ease-in-out;

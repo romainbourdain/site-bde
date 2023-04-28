@@ -1,21 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import footerText from "../../assets/text/footer";
 
 const Copyrights = () => {
   return (
     <Container>
-      <p>© 2023 - Tous droits réservés</p>
-      <p>
-        Développement par Romain Bourdain (Dieu vivant) - Design par Enzo
-        Bergamini (Légende Urbaine)
-      </p>
+      <p>{footerText.copyrights.copyright}</p>
+      <p>{footerText.copyrights.credits}</p>
     </Container>
   );
 };
 
 const Container = styled.div`
-  background-color: #121212;
-  color: #fff;
+  background-color: ${(props) => props.theme.backgroundDarker};
+  color: ${(props) => props.theme.textLight};
   text-align: center;
   padding: 15px;
   font-size: 1.1rem;

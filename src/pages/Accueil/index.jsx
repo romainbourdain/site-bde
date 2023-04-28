@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Header from "./Header";
 import styled from "styled-components";
-import navbarColors from "../../assets/colors/navbar";
 import Presentation from "./Presentation";
 import Figures from "./Figures";
 import Trombinoscope from "./Trombinoscope";
@@ -31,9 +30,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar
-        color={transparentNavbar ? "transparent" : navbarColors.background}
-      />
+      <Navbar color={transparentNavbar ? "transparent" : ""} />
       <Container>
         <Header scroll={scroll} />
         <div ref={presentationRef}>

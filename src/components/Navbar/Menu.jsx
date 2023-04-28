@@ -26,7 +26,8 @@ const StyledMenu = styled.ul`
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: ${(props) => props.theme.menu};
+  background-color: ${(props) => props.theme.backgroundDark};
+  opacity: 0.8;
   width: 100%;
   z-index: -1;
   transform: translateY(100%);
@@ -38,7 +39,7 @@ const StyledMenu = styled.ul`
 const LinkLabel = styled.span`
   padding: 10px;
   background-color: transparent;
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.textLight};
   transition: 0.2s ease-in-out;
 `;
 
@@ -50,7 +51,7 @@ const LinkContainer = styled(Link)`
   height: 50px;
 
   &:not(:last-child) {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid ${(props) => props.theme.textLight};
   }
 
   &:hover ${LinkLabel} {
@@ -62,7 +63,7 @@ const MenuLabel = styled.span`
   padding: 10px;
   transition: all 0.2s ease-in-out, border-radius 0.5s ease-in;
   border-radius: 2px;
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.textLight};
   display: flex;
   gap: 10px;
 `;

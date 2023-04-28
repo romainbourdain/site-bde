@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import routes from "../routes/routes";
 import ErreurImg from "../assets/img/erreur.png";
 import Footer from "../components/Footer";
+import erreurText from "../assets/text/erreur";
 
 const Error = () => {
   return (
@@ -12,10 +13,8 @@ const Error = () => {
       <Navbar />
       <Container>
         <Image src={ErreurImg} alt="erreur" />
-        <Title>Oh non ! Cette page n'existe pas :(</Title>
-        <StyledLink to={routes.accueil.path}>
-          Revenir à la page d'accueil
-        </StyledLink>
+        <Title>{erreurText.message}</Title>
+        <StyledLink to={routes.accueil.path}>{erreurText.link}</StyledLink>
       </Container>
       <Footer />
     </>

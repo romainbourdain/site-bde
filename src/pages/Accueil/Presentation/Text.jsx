@@ -54,12 +54,7 @@ const TextContainer = styled.div`
   p {
     font-weight: 400;
     font-size: 1.5rem;
-    color: #4b4b4b;
-
-    a {
-      color: #4b4b4b;
-      text-decoration: underline;
-    }
+    color: ${(props) => props.theme.textDarkSecondary};
 
     li {
       list-style: disc;

@@ -1,10 +1,10 @@
 import React from "react";
-import LogoBde from "../../assets/img/logo-bde.png";
+import LogoBde from "../../assets/img/logo-bde.jpg";
 import styled, { ThemeProvider } from "styled-components";
-import navbarColors from "../../assets/colors/navbar";
 import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
 import routes from "../../routes/routes";
+import colors from "../../assets/colors";
 
 const Navbar = ({ color }) => {
   const links = [
@@ -34,11 +34,13 @@ const Navbar = ({ color }) => {
       ],
     },
   ];
-  const theme = { ...navbarColors };
+  const theme = {
+    background: colors.backgroundDark,
+    selected: colors.primary,
+  };
 
   if (color === "transparent") {
     theme.background = "transparent";
-    theme.menu = "rgba(0, 0, 0, 0.5)";
   }
 
   return (
@@ -88,13 +90,14 @@ const LogoContainer = styled.div`
 const LogoTitle = styled.span`
   font-size: 1.4rem;
   font-weight: 800;
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.textLight};
 `;
 
 const Logo = styled.img`
   height: 50px;
   aspect-ratio: 1/1;
   margin: 10px 0;
+  border-radius: 100%;
 `;
 
 const LinkList = styled.div`
@@ -109,18 +112,8 @@ const LinkLabel = styled.span`
   margin: 10px 0;
   padding: 10px 0;
   transition: 0.2s ease-in-out;
-  color: ${(props) => props.theme.text};
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: #fff;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    color: ${(props) => props.theme.selected};
-    transition: 0.2s ease-in-out;
-  }
+  color: ${(props) => props.theme.textLight};
+  border-bottom: solid ${(props) => props.theme.textLight} 0;
 `;
 
 const LinkContainer = styled(NavLink)`
@@ -129,14 +122,11 @@ const LinkContainer = styled(NavLink)`
 
   &:hover ${LinkLabel} {
     color: ${(props) => props.theme.selected};
-
-    &::after {
-      background-color: ${(props) => props.theme.selected};
-    }
+    border-color: ${(props) => props.theme.selected};
   }
 
-  &.active span::after {
-    height: 1px;
+  &.active ${LinkLabel} {
+    border-width: 1px;
   }
 `;
 

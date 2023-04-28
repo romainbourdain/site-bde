@@ -1,12 +1,12 @@
 import React from "react";
 import Router from "./routes/Router";
 import { ThemeProvider } from "styled-components";
-import globalColors from "./assets/colors/global";
+import colors from "./assets/colors";
 import GlobalStyle from "./style";
 
 const App = () => {
   return (
-    <ThemeProvider theme={globalColors}>
+    <ThemeProvider theme={colors}>
       <GlobalStyle />
       <Router />
     </ThemeProvider>

@@ -23,7 +23,7 @@ const Container = styled.span`
     top: 50%;
     width: 15px;
     height: 30px;
-    background: #367cbc;
+    background: ${(props) => props.theme.primary};
     transform: skew(5deg, 60deg) translate(-50%, -5%);
   }
 
@@ -35,7 +35,7 @@ const Container = styled.span`
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #fff;
+    background: ${(props) => props.theme.white};
     transform: translate(-50%, -50%);
   }
 

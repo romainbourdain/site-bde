@@ -5,11 +5,13 @@ import Flams from "../../assets/img/partenaires/flams.png";
 import SocieteGenerale from "../../assets/img/partenaires/societe-generale.png";
 import LibrairiesKleber from "../../assets/img/partenaires/librairies-kleber.png";
 import Reveal from "../../animations/Reveal";
+import Title1 from "../../components/Titles/Title1";
+import accueilText from "../../assets/text/accueil";
 
 const Partenaires = () => {
   return (
     <Container>
-      <Title>Nos partenaires</Title>
+      <Title1>{accueilText.partenaires.title}</Title1>
       <Wrapper>
         <Reveal>
           <Image src={EVS} alt="En Voiture Simone" />
@@ -30,12 +32,6 @@ const Partenaires = () => {
 
 const Container = styled.div`
   padding: 60px 220px;
-`;
-
-const Title = styled.h1`
-  text-align: center;
-  font-size: 3.5rem;
-  font-weight: 700;
 `;
 
 const Image = styled.img`
