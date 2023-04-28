@@ -95,7 +95,7 @@ const accueilText = {
     },
     clubsAssos: {
       title: "Clubs et Associations",
-      number: 20,
+      number: 40,
     },
   },
   trombinoscope: {

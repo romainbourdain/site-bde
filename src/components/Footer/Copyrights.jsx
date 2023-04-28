@@ -18,6 +18,11 @@ const Container = styled.div`
   padding: 15px;
   font-size: 1.1rem;
   line-height: 1.5rem;
+  width: 100%;
+
+  @media (max-width: 850px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export default Copyrights;
