@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import Modal from "../../../components/Modal";
 
 const Partenaires = () => {
   const swiperSettings = {
@@ -38,7 +39,12 @@ const Partenaires = () => {
       <StyledSwiper {...swiperSettings}>
         {partenaires.map((partenaire) => (
           <SwiperSlide>
-            <Image src={partenaire.img} alt={partenaire.name} />
+            <Modal
+              trigger={<Image src={partenaire.img} alt={partenaire.name} />}
+              title={partenaire.name}
+            >
+              {partenaire.description}
+            </Modal>
           </SwiperSlide>
         ))}
       </StyledSwiper>
