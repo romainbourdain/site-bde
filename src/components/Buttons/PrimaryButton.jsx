@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const PrimaryButton = ({ children, onClick }) => {
-  return <StyledButton onClick={onClick}>{children}</StyledButton>;
-};
-
-const StyledButton = styled.button`
+const PrimaryButton = styled.button`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 10px;
   padding: 20px 40px;
   font-size: 1.8rem;
@@ -23,7 +19,16 @@ const StyledButton = styled.button`
   }
 
   svg {
-    transform: scale(0.7);
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1450px) {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+
+    svg {
+      font-size: 1.3rem;
+    }
   }
 `;
 

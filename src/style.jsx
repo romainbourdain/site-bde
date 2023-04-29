@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${({ theme }) => theme.backgroundLight};
         color: ${({ theme }) => theme.textDark};
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
     }
 
     a {

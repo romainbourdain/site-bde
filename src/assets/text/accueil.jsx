@@ -100,104 +100,87 @@ const accueilText = {
   },
   trombinoscope: {
     title: "Trombinoscope du BDE",
-    sections: [
+    members: [
       {
-        poles: ["Bureau"],
-        members: [
-          {
-            name: "Alex",
-            role: "Secrétaire",
-            image: Alex,
-          },
-          {
-            name: "Antonin",
-            role: "Président",
-            image: Antonin,
-          },
-          {
-            name: "Lauryne",
-            role: "Trésorière",
-            image: Lauryne,
-          },
-        ],
+        name: "Antonin",
+        role: "Président",
+        image: Antonin,
       },
       {
-        poles: ["Fouaille"],
-        members: [
-          {
-            name: "Emma",
-            role: "Fouaille",
-            image: Emma,
-          },
-          {
-            name: "Gaetane",
-            role: "Fouaille",
-            image: Gaetane,
-          },
-          {
-            name: "Luka",
-            role: "Fouaille",
-            image: Luka,
-          },
-          {
-            name: "Roman",
-            role: "Fouaille",
-            image: Roman,
-          },
-        ],
+        name: "Alex",
+        role: "Secrétaire",
+        image: Alex,
       },
       {
-        poles: ["Communication"],
-        members: [
-          {
-            name: "Julien",
-            role: "Int",
-            image: Julien,
-          },
-          {
-            name: "Léa",
-            role: "Alternance",
-            image: Lea,
-          },
-          {
-            name: "Killian",
-            role: "Réseaux",
-            image: Killian,
-          },
-          {
-            name: "Enzo",
-            role: "Chti",
-            image: Enzo,
-          },
-        ],
+        name: "Lauryne",
+        role: "Trésorière",
+        image: Lauryne,
       },
       {
-        poles: ["Spons", "Ext"],
-        members: [
-          {
-            name: "Florian",
-            role: "Spons",
-            image: Florian,
-          },
-          {
-            name: "Mathis",
-            role: "Spons",
-            image: Mathis,
-          },
-          {
-            name: "Nathan",
-            role: "Ext",
-            image: Nathan,
-          },
-          {
-            name: "Félix",
-            role: "Ext",
-            image: Felix,
-          },
-        ],
+        name: "Emma",
+        role: "Fouaille",
+        image: Emma,
+      },
+      {
+        name: "Gaetane",
+        role: "Fouaille",
+        image: Gaetane,
+      },
+      {
+        name: "Luka",
+        role: "Fouaille",
+        image: Luka,
+      },
+      {
+        name: "Roman",
+        role: "Fouaille",
+        image: Roman,
+      },
+      {
+        name: "Julien",
+        role: "Int",
+        image: Julien,
+      },
+      {
+        name: "Léa",
+        role: "Alternance",
+        image: Lea,
+      },
+      {
+        name: "Killian",
+        role: "Réseaux",
+        image: Killian,
+      },
+      {
+        name: "Enzo",
+        role: "Chti",
+        image: Enzo,
+      },
+
+      {
+        name: "Florian",
+        role: "Spons",
+        image: Florian,
+      },
+      {
+        name: "Mathis",
+        role: "Spons",
+        image: Mathis,
+      },
+
+      {
+        name: "Nathan",
+        role: "Ext",
+        image: Nathan,
+      },
+      {
+        name: "Félix",
+        role: "Ext",
+        image: Felix,
       },
     ],
   },
+
   partenaires: {
     title: "Nos partenaires",
   },

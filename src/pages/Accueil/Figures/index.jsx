@@ -27,7 +27,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px 30%;
+  padding: 100px 10vw;
 `;
 
 export default Figures;

@@ -59,6 +59,10 @@ const Container = styled.div`
   flex-direction: column;
   padding: 150px 200px;
   gap: 100px;
+
+  @media (max-width: 1600px) {
+    padding: 150px 100px;
+  }
 `;
 
 export default Presentation;

@@ -35,6 +35,12 @@ const IconBox = styled.div`
   border-radius: 100%;
   color: ${(props) => props.theme.textDark};
   font-size: 4rem;
+
+  @media (max-width: 1200px) {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+  }
 `;
 
 export default Figure;

@@ -27,10 +27,18 @@ const Container = styled.div`
 const Number = styled(CountUp)`
   font-weight: 700;
   font-size: 2.7rem;
+
+  @media (max-width: 1200px) {
+    font-size: 2.2rem;
+  }
 `;
 
 const Label = styled.span`
   font-size: 2rem;
+
+  @media (max-width: 1200px) {
+    font-size: 1.7rem;
+  }
 `;
 
 export default Counter;

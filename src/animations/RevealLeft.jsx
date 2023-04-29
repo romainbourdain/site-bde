@@ -20,6 +20,9 @@ const RevealLeft = ({ children, delay = 0 }) => {
 };
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &.reveal-left {
     opacity: 0;
     transform: translateX(-10px);
