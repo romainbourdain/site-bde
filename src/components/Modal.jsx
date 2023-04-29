@@ -60,6 +60,18 @@ const Container = styled.div`
   flex-direction: column;
   gap: 50px;
 
+  a {
+    color: ${(props) => props.theme.primary};
+  }
+
+  li {
+    list-style: circle;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
   @media (max-width: 1200px) {
     font-size: 1.5rem;
   }

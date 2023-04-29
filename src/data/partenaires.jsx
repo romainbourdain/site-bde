@@ -17,8 +17,42 @@ const partenaires = [
     img: EVS,
     description: (
       <p>
-        Code promo TPSTRASBOURG d’une valeur de 50€ sur le prix du pack permis
-        (20h de conduite) soit le permis à 699€
+        Code promo <strong>TPSTRASBOURG</strong> d’une valeur de 50€ sur le prix
+        du pack permis (20h de conduite) soit le permis à 699€
+      </p>
+    ),
+  },
+  {
+    name: "Flam's",
+    img: Flams,
+    description: (
+      <p>
+        <p>Il est impératif de réserver avant pour bénéficier des offres</p>
+        <p>
+          <strong>Offre individuelle :</strong>
+          <br />
+          Formule à 10 €<br />
+          Elsassich Formule à 15€ Hopla
+        </p>
+        <p>
+          <strong>Offre de groupe (à partir de 20 personnes) :</strong>
+          <br />
+          Formule à 14€ avec Flam’s terroirs à volonté (traditionnelle,
+          gratinée, champignon, champignon gratinée) + 1L de boisson par
+          personne (soft, bière ou vin)
+          <br />
+          Formule à 15€ avec Flam’s terroirs à volonté + 1L de boisson par
+          personne (soft, bière ou vin) + Assortiment de Flam’s sucrées en
+          dessert
+        </p>
+        <p>
+          {" "}
+          <strong>
+            Offre de groupe à emporter (à partir de 20 personnes):{" "}
+          </strong>
+          <br />
+          3.20€ la traditionnelle et la gratinée et 4.00€ la champignon gratinée
+        </p>
       </p>
     ),
   },
@@ -27,26 +61,11 @@ const partenaires = [
     img: SocieteGenerale,
     description: (
       <p>
-        Il est impératif de réserver avant pour bénéficier des offres Offre
-        individuelle : Formule à 10 € Elsassich Formule à 15€ Hopla Offre de
-        groupe (à partir de 20 personnes) : Formule à 14€ avec Flam’s terroirs à
-        volonté (traditionnelle, gratinée, champignon, champignon gratinée) + 1L
-        de boisson par personne (soft, bière ou vin) Formule à 15€ avec Flam’s
-        terroirs à volonté + 1L de boisson par personne (soft, bière ou vin) +
-        Assortiment de Flam’s sucrées en dessert Offre de groupe à emporter (à
-        partir de 20 personnes): 3.20€ la traditionnelle et la gratinée et 4.00€
-        la champignon gratinée
-      </p>
-    ),
-  },
-  {
-    name: "Flams",
-    img: Flams,
-    description: (
-      <p>
-        80 € à l’ouverture de compte d’un 1er compte bancaire SG SOBRIO : 1€/an
-        pendant 4 ans 3 mois offerts sur la MRH 2€ l’option internationale Prêt
-        étudiant : frais de dossiers offerts
+        <p>80 € à l’ouverture de compte d’un 1er compte bancaire SG</p>
+        <p>
+          SOBRIO : 1€/an pendant 4 ans 3 mois offerts sur la MRH 2€ l’option
+          internationale Prêt étudiant : frais de dossiers offerts
+        </p>
       </p>
     ),
   },
