@@ -28,8 +28,19 @@ const Modal = ({ trigger, title, children }) => {
 };
 
 const PopupStyle = createGlobalStyle`
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
     .popup-content {
         border-radius: 60px;
+        animation: zoom 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
 
         @media (max-width: 1050px) {
             width: 70vw;
