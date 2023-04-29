@@ -30,6 +30,15 @@ const PrimaryButton = styled.button`
       font-size: 1.3rem;
     }
   }
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+
+    svg {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export default PrimaryButton;

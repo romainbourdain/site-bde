@@ -73,16 +73,21 @@ const Container = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 15vw);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   text-align: center;
-  gap: 10px 20px;
+  gap: 10px 50px;
   font-weight: 700;
   color: ${(props) => props.theme.textLight};
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 600px) {
+    gap: 10px 20px;
+  }
 `;
 
 const Title = styled.h1`
+  text-align: center;
   font-size: 3.7rem;
   font-weight: 700;
   color: ${(props) => props.theme.textLight};
@@ -94,6 +99,10 @@ const Title = styled.h1`
 
   @media (max-width: 750px) {
     font-size: 2.5rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
   }
 `;
 
@@ -107,6 +116,10 @@ const Countdown = styled.span`
   @media (max-width: 750px) {
     font-size: 2.5rem;
   }
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
 const CountdownUnit = styled.span`
@@ -118,6 +131,10 @@ const CountdownUnit = styled.span`
 
   @media (max-width: 750px) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
   }
 `;
 
