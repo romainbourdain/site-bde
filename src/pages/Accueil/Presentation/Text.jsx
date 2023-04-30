@@ -89,32 +89,6 @@ const TextContainer = styled.div`
   align-items: left;
   flex: 1;
   grid-column: ${(props) => (props.pos === "left" ? "1/3" : "2/4")};
-
-  p {
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: ${(props) => props.theme.textDarkSecondary};
-
-    @media (min-width: 1024px) and (max-width: 1450px) {
-      font-size: 1.1rem;
-    }
-
-    @media (max-width: 900px) {
-      font-size: 1.3rem;
-    }
-
-    li {
-      list-style: disc;
-    }
-
-    @media (max-width: 1450px) {
-      gap: 30px;
-    }
-
-    @media (max-width: 1024px) {
-      align-items: center;
-    }
-  }
 `;
 
 const Image = styled.img`

@@ -39,14 +39,14 @@ const Home = () => {
         <Figures />
         <Trombinoscope />
         <Partenaires />
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 };
 
 const Container = styled.div`
-  height: 200vh;
+  min-height: 200vh;
 `;
 
 export default Home;

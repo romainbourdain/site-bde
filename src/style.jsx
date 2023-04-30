@@ -16,12 +16,33 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
-        color: ${({ theme }) => theme.textDark};
+    }
+
+    p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: ${(props) => props.theme.textDark};
+
+    @media (min-width: 1024px) and (max-width: 1450px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 900px) {
+      font-size: 1.3rem;
     }
 
     li {
-        list-style: none;
+      list-style: disc;
     }
+
+    @media (max-width: 1450px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 1024px) {
+      align-items: center;
+    }
+  }
 `;
 
 export default GlobalStyle;

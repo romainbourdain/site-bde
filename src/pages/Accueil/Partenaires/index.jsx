@@ -73,6 +73,7 @@ const Image = styled.img`
 const StyledSwiper = styled(Swiper)`
   width: 100%;
   height: 300px;
+  cursor: pointer;
 
   .swiper-slide {
     display: flex;

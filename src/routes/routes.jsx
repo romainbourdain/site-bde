@@ -1,6 +1,7 @@
 import Accueil from "../pages/Accueil";
 import Erreur from "../pages/Erreur";
 import ClubsAssos from "../pages/ClubsAssos";
+import NePasOublier from "../pages/NePasOublier";
 const routes = {
   accueil: {
     id: "accueil",
@@ -15,7 +16,7 @@ const routes = {
   nePasOublier: {
     id: "ne-pas-oublier",
     path: "/ne-pas-oublier",
-    element: <Erreur />,
+    element: <NePasOublier />,
   },
   vivreAStrasbourg: {
     id: "vivre-a-strasbourg",

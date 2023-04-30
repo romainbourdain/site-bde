@@ -60,14 +60,6 @@ const Container = styled.div`
   flex-direction: column;
   gap: 50px;
 
-  a {
-    color: ${(props) => props.theme.primary};
-  }
-
-  li {
-    list-style: circle;
-  }
-
   p {
     margin-bottom: 1rem;
   }
@@ -110,6 +102,7 @@ const Button = styled.button`
   font-size: 2.5rem;
   color: ${(props) => props.theme.textDark};
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     color: ${(props) => props.theme.primary};

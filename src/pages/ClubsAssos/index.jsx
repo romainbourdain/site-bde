@@ -43,6 +43,7 @@ const ClubsAssos = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   gap: 50px;
   margin-top: 50px;
   padding: 110px 110px;

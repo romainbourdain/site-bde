@@ -10,6 +10,11 @@ const colors = {
   textLight: "#f6f6f6",
   textLightSecondary: "#cfcfcf",
 
+  nePasOublier: "#bcbbd5",
+  quotidien: "#bbd9ce",
+  cours: "#f8785b",
+  integration: "#ffdb9d",
+
   black: "#000000",
   white: "#ffffff",
 };
