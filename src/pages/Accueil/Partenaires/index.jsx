@@ -57,6 +57,7 @@ const Container = styled.div`
   display: flex;
   gap: 60px;
   flex-direction: column;
+  user-select: none;
 
   @media (max-width: 1024px) {
     gap: 30px;
@@ -77,6 +78,7 @@ const StyledSwiper = styled(Swiper)`
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
   }
 `;
 

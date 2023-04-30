@@ -3,13 +3,14 @@ import styled from "styled-components";
 import Card from "./Card";
 import Title1 from "../../../components/Titles/Title1";
 import accueilText from "../../../assets/text/accueil";
+import members from "../../../data/membresBde";
 
 const Trombinoscope = () => {
   return (
     <Container>
-      <Title1>Trombinoscope du BDE</Title1>
+      <Title1>{accueilText.trombinoscope.title}</Title1>
       <Grid>
-        {accueilText.trombinoscope.members.map((member, key) => (
+        {members.map((member, key) => (
           <Card
             img={member.image}
             prenom={member.name}

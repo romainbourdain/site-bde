@@ -11,7 +11,7 @@ const Text = ({ imagePos, src, alt, children }) => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [width]);
   const childrenArray = Children.toArray(children);
   if (window.innerWidth < 1024)
     return (

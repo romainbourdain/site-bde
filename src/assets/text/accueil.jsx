@@ -3,22 +3,6 @@ import Img2 from "../img/home/img2.jpeg";
 import Img3 from "../img/home/img3.jpeg";
 import Img4 from "../img/home/img4.jpeg";
 
-import Alex from "../img/trombinoscope/alex.jpg";
-import Antonin from "../img/trombinoscope/antonin.jpg";
-import Lauryne from "../img/trombinoscope/lauryne.jpg";
-import Emma from "../img/trombinoscope/emma.jpg";
-import Gaetane from "../img/trombinoscope/gaetane.jpg";
-import Luka from "../img/trombinoscope/luka.jpg";
-import Roman from "../img/trombinoscope/roman.jpg";
-import Julien from "../img/trombinoscope/julien.jpg";
-import Lea from "../img/trombinoscope/lea.jpg";
-import Killian from "../img/trombinoscope/killian.jpg";
-import Enzo from "../img/trombinoscope/enzo.jpg";
-import Florian from "../img/trombinoscope/florian.jpg";
-import Mathis from "../img/trombinoscope/mathis.jpg";
-import Nathan from "../img/trombinoscope/nathan.jpg";
-import Felix from "../img/trombinoscope/felix.jpg";
-
 const accueilText = {
   header: {
     title: "Début de l'intégration dans",
@@ -100,85 +84,6 @@ const accueilText = {
   },
   trombinoscope: {
     title: "Trombinoscope du BDE",
-    members: [
-      {
-        name: "Antonin",
-        role: "Président",
-        image: Antonin,
-      },
-      {
-        name: "Alex",
-        role: "Secrétaire",
-        image: Alex,
-      },
-      {
-        name: "Lauryne",
-        role: "Trésorière",
-        image: Lauryne,
-      },
-      {
-        name: "Emma",
-        role: "Fouaille",
-        image: Emma,
-      },
-      {
-        name: "Gaetane",
-        role: "Fouaille",
-        image: Gaetane,
-      },
-      {
-        name: "Luka",
-        role: "Fouaille",
-        image: Luka,
-      },
-      {
-        name: "Roman",
-        role: "Fouaille",
-        image: Roman,
-      },
-      {
-        name: "Julien",
-        role: "Int",
-        image: Julien,
-      },
-      {
-        name: "Léa",
-        role: "Alternance",
-        image: Lea,
-      },
-      {
-        name: "Killian",
-        role: "Réseaux",
-        image: Killian,
-      },
-      {
-        name: "Enzo",
-        role: "Chti",
-        image: Enzo,
-      },
-
-      {
-        name: "Florian",
-        role: "Spons",
-        image: Florian,
-      },
-      {
-        name: "Mathis",
-        role: "Spons",
-        image: Mathis,
-      },
-
-      {
-        name: "Nathan",
-        role: "Ext",
-        image: Nathan,
-      },
-      {
-        name: "Félix",
-        role: "Ext",
-        image: Felix,
-      },
-    ],
   },
 
   partenaires: {
