@@ -6,6 +6,7 @@ import colors from "../../assets/colors";
 import nePasOublierText from "../../assets/text/ne-pas-oublier";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Reveal from "../../animations/Reveal";
+import Title2 from "../../components/Titles/Title2";
 
 export const Section = ({ color, title, items, icon }) => {
   return (
@@ -67,9 +68,22 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 100px;
+
+  @media (max-width: 1400px) {
+    padding: 200px 10vw;
+  }
+
+  @media (max-width: 700px) {
+    padding: 100px 5vw;
+  }
 `;
 
-const Title = styled(Title1)`
+const HeaderTitle = styled(Title1)`
+  display: flex;
+  gap: 15px;
+`;
+
+const Title = styled(Title2)`
   display: flex;
   gap: 15px;
 `;
@@ -88,6 +102,14 @@ const Item = styled.div`
 
   p {
     font-size: 1.7rem;
+
+    @media (max-width: 1400px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.3rem;
+    }
   }
 `;
 
@@ -104,14 +126,18 @@ const TextContainer = styled.div`
   gap: 50px;
 `;
 
-const HeaderTitle = styled(Title)`
-  font-size: 5.5rem;
-`;
-
 const HeaderIcon = styled.div`
   display: flex;
   align-items: center;
   font-size: 10rem;
+
+  @media (max-width: 1400px) {
+    font-size: 8rem;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Text = styled.div`
@@ -121,6 +147,14 @@ const Text = styled.div`
   flex-direction: column;
   gap: 1rem;
   p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+
+    @media (max-width: 1400px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.3rem;
+    }
   }
 `;
