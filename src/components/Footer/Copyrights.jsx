@@ -5,20 +5,22 @@ import footerText from "../../assets/text/footer";
 const Copyrights = () => {
   return (
     <Container>
-      <p>{footerText.copyrights.copyright}</p>
-      <p>{footerText.copyrights.credits}</p>
+      <span>{footerText.copyrights.copyright}</span>
+      <span>{footerText.copyrights.credits}</span>
     </Container>
   );
 };
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.backgroundDarker};
-  color: ${(props) => props.theme.textLight};
+  color: ${(props) => props.theme.textLightSecondary};
   text-align: center;
   padding: 15px;
   font-size: 1.1rem;
   line-height: 1.5rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 850px) {
     font-size: 0.8rem;

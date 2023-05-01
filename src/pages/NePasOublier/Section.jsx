@@ -5,22 +5,27 @@ import Title1 from "../../components/Titles/Title1";
 import colors from "../../assets/colors";
 import nePasOublierText from "../../assets/text/ne-pas-oublier";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
+import Reveal from "../../animations/Reveal";
 
 export const Section = ({ color, title, items, icon }) => {
   return (
     <ThemeProvider theme={{ background: color }}>
       <Container>
-        <Title>
-          <FontAwesomeIcon icon={icon} />
-          {title}
-        </Title>
+        <Reveal delay="0.1s">
+          <Title>
+            <FontAwesomeIcon icon={icon} />
+            {title}
+          </Title>
+        </Reveal>
         <ItemContainer>
-          {items.map((item) => (
-            <Item>
-              <Icon>
-                <FontAwesomeIcon icon={item.icon} />
-              </Icon>
-              {item.paragraph}
+          {items.map((item, key) => (
+            <Item key={key}>
+              <Reveal>
+                <Icon>
+                  <FontAwesomeIcon icon={item.icon} />
+                </Icon>
+              </Reveal>
+              <Reveal delay="0.1s">{item.paragraph}</Reveal>
             </Item>
           ))}
         </ItemContainer>
@@ -33,15 +38,21 @@ export const HeaderSection = () => {
   return (
     <ThemeProvider theme={{ background: colors.nePasOublier }}>
       <Container>
-        <HeaderTitle>
-          <FontAwesomeIcon icon={nePasOublierText.header.icon} />
-          {nePasOublierText.header.title}
-        </HeaderTitle>
+        <Reveal delay="0.1s">
+          <HeaderTitle>
+            <FontAwesomeIcon icon={nePasOublierText.header.icon} />
+            {nePasOublierText.header.title}
+          </HeaderTitle>
+        </Reveal>
         <TextContainer>
-          <HeaderIcon>
-            <FontAwesomeIcon icon={faMapLocationDot} />
-          </HeaderIcon>
-          <Text>{nePasOublierText.header.paragraph}</Text>
+          <Reveal>
+            <HeaderIcon>
+              <FontAwesomeIcon icon={faMapLocationDot} />
+            </HeaderIcon>
+          </Reveal>
+          <Reveal delay="0.1s">
+            <Text>{nePasOublierText.header.paragraph}</Text>
+          </Reveal>
         </TextContainer>
       </Container>
     </ThemeProvider>
@@ -94,7 +105,7 @@ const TextContainer = styled.div`
 `;
 
 const HeaderTitle = styled(Title)`
-  font-size: 4.5rem;
+  font-size: 5.5rem;
 `;
 
 const HeaderIcon = styled.div`

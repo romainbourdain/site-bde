@@ -7,7 +7,7 @@ import BurgersPapa from "../assets/img/partenaires/burgers-papa.png";
 import BodyHit from "../assets/img/partenaires/bodyhit.png";
 import PtitsCochons from "../assets/img/partenaires/3-ptits-cochons.png";
 import Auchan from "../assets/img/partenaires/auchan.png";
-import PressTaBiere from "../assets/img/partenaires/press-ta-biere.jpg";
+import PressTaBiere from "../assets/img/partenaires/press-ta-biere.png";
 import ReussiteToeic from "../assets/img/partenaires/reussite-toeic.png";
 import DeliriumCafe from "../assets/img/partenaires/delirium-cafe.png";
 
@@ -26,7 +26,7 @@ const partenaires = [
     name: "Flam's",
     img: Flams,
     description: (
-      <p>
+      <>
         <p>Il est impératif de réserver avant pour bénéficier des offres</p>
         <p>
           <strong>Offre individuelle :</strong>
@@ -53,7 +53,7 @@ const partenaires = [
           <br />
           3.20€ la traditionnelle et la gratinée et 4.00€ la champignon gratinée
         </p>
-      </p>
+      </>
     ),
   },
   {

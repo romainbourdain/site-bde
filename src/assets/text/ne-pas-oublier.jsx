@@ -21,7 +21,7 @@ const nePasOublierText = {
     title: "Ne pas Oublier",
     icon: faSuitcaseRolling,
     paragraph: (
-      <p>
+      <>
         <p>
           Tu penses être paré pour la <strong>rentrée</strong> ? Es-tu sûr de
           n'avoir rien oublié ?
@@ -30,7 +30,7 @@ const nePasOublierText = {
           Nous t'avons concoté une petite liste pour te préparer au mieux à la
           vie à <strong>Strasbourg</strong> et dans <strong>l'école !</strong>
         </p>
-      </p>
+      </>
     ),
   },
   quotidien: {

@@ -37,8 +37,8 @@ const Partenaires = () => {
     <Container>
       <Title1>{accueilText.partenaires.title}</Title1>
       <StyledSwiper {...swiperSettings}>
-        {partenaires.map((partenaire) => (
-          <SwiperSlide>
+        {partenaires.map((partenaire, key) => (
+          <SwiperSlide key={key}>
             <Modal
               trigger={<Image src={partenaire.img} alt={partenaire.name} />}
               title={partenaire.name}
