@@ -4,31 +4,32 @@ import Footer from "../../components/Footer";
 import styled from "styled-components";
 import nePasOublierText from "../../assets/text/ne-pas-oublier";
 import colors from "../../assets/colors";
-import { Section, HeaderSection } from "./Section";
+import Section from "./Section";
+import Header from "./Header";
 
 const NePasOublier = () => {
   return (
     <>
       <Navbar />
       <Container>
-        <HeaderSection />
+        <Header />
         <Section
           title={nePasOublierText.quotidien.title}
           items={nePasOublierText.quotidien.items}
           icon={nePasOublierText.quotidien.icon}
-          color={colors.quotidien}
+          theme={{ background: colors.quotidien }}
         />
         <Section
           title={nePasOublierText.cours.title}
           items={nePasOublierText.cours.items}
           icon={nePasOublierText.cours.icon}
-          color={colors.cours}
+          theme={{ background: colors.cours }}
         />
         <Section
           title={nePasOublierText.integration.title}
           items={nePasOublierText.integration.items}
           icon={nePasOublierText.integration.icon}
-          color={colors.integration}
+          theme={{ background: colors.integration }}
         />
       </Container>
       <Footer />

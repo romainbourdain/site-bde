@@ -2,6 +2,7 @@ import Accueil from "../pages/Accueil";
 import Erreur from "../pages/Erreur";
 import ClubsAssos from "../pages/ClubsAssos";
 import NePasOublier from "../pages/NePasOublier";
+import VivreAStrasbourg from "../pages/VivreAStrasbourg";
 const routes = {
   accueil: {
     id: "accueil",
@@ -21,7 +22,7 @@ const routes = {
   vivreAStrasbourg: {
     id: "vivre-a-strasbourg",
     path: "/vivre-a-strasbourg",
-    element: <Erreur />,
+    element: <VivreAStrasbourg />,
   },
   vivreATPS: {
     id: "vivre-a-tps",

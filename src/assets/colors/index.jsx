@@ -15,6 +15,8 @@ const colors = {
   cours: "#f8785b",
   integration: "#ffdb9d",
 
+  vivreAStrasbourg: "#CD4242",
+
   black: "#000000",
   white: "#ffffff",
 };
