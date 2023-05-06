@@ -1,9 +1,10 @@
 import React from "react";
-import { Container, Title } from "../../components/Section";
+import { Container } from "../../components/Section";
 import Reveal from "../../animations/Reveal";
 import colors from "../../assets/colors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { ThemeProvider } from "styled-components";
+import Title2 from "../../components/Titles/Title2";
 
 const Section = ({ theme, title, items, icon }) => {
   const defaultTheme = {
@@ -41,6 +42,12 @@ const ItemContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+`;
+
+const Title = styled(Title2)`
+  display: flex;
+  color: ${(props) => props.theme.text};
+  gap: 15px;
 `;
 
 const Item = styled.div`

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import { Container, Text } from "../../components/Section";
+import { Container, Text, Title } from "../../components/Section";
 import Reveal from "../../animations/Reveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import nePasOublierText from "../../assets/text/ne-pas-oublier";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
-import Title1 from "../../components/Titles/Title1";
 import colors from "../../assets/colors";
 
 export const Header = () => {
@@ -73,11 +72,6 @@ const BreakSite = createGlobalStyle`
   * {
     animation: 17s rotate linear infinite, 7s scale linear infinite;
   }
-`;
-
-const Title = styled(Title1)`
-  display: flex;
-  gap: 15px;
 `;
 
 const Icon = styled.div`

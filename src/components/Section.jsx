@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Title2 from "./Titles/Title2";
+import Title1 from "./Titles/Title1";
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.background};
@@ -20,10 +21,10 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled(Title2)`
+export const Title = styled(Title1)`
   display: flex;
-  color: ${(props) => props.theme.text};
   gap: 15px;
+  color: ${(props) => props.theme.text};
 `;
 
 export const Text = styled.div`
