@@ -19,9 +19,7 @@ const Section = ({ theme, title, img, imgPos, children, imgFit = "cover" }) => {
         <Reveal>
           <TextContainer>
             <Image src={img} alt={title} pos={imgPos} fit={imgFit} />
-            <StyledText style={{ flex: 1 }} pos={imgPos}>
-              {children}
-            </StyledText>
+            <StyledText pos={imgPos}>{children}</StyledText>
           </TextContainer>
         </Reveal>
       </StyledContainer>

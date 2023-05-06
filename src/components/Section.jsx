@@ -34,6 +34,7 @@ export const Text = styled.div`
   flex-direction: column;
   gap: 1rem;
   p {
+    color: ${(props) => props.theme.text};
     font-size: 1.7rem;
 
     @media (max-width: 1400px) {

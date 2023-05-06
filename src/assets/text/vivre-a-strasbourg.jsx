@@ -119,9 +119,9 @@ const vivreAStrasbourgText = {
     ),
   },
   residences: {
-    title: "Liste non exhaustive des résidences où l'on trouve des Psiens",
     paragraph: (
       <>
+        <p>Liste non exhaustive des résidences où l'on trouve des Psiens : </p>
         <p>
           Ce sont des <strong>résidences récentes</strong> (moins de 10 ans)
           avec{" "}
@@ -142,7 +142,7 @@ const vivreAStrasbourgText = {
     items: [
       {
         name: "Les Héliotropes",
-        subtitle: "crous",
+        subtitle: "(crous)",
         link: "https://www.crous-strasbourg.fr/logement/residence-les-heliotropes/",
       },
       {

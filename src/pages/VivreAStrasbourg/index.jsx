@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Section from "./Section";
 import vivreAStrasbourgText from "../../assets/text/vivre-a-strasbourg";
 import colors from "../../assets/colors";
+import Logement from "./Logement";
 
 const VivreAStrasbourg = () => {
   return (
@@ -46,19 +47,7 @@ const VivreAStrasbourg = () => {
         >
           {vivreAStrasbourgText.restauration.paragraph}
         </Section>
-        <Section
-          title={vivreAStrasbourgText.logement.title}
-          img={vivreAStrasbourgText.logement.img}
-          imgPos="right"
-          imgFit="contain"
-          theme={{
-            background: colors.vivreAStrasbourg,
-            text: colors.textLight,
-            paragraph: colors.textLight,
-          }}
-        >
-          {vivreAStrasbourgText.logement.paragraph}
-        </Section>
+        <Logement />
       </Container>
       <Footer />
     </>
