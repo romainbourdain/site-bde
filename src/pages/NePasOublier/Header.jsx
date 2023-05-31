@@ -70,7 +70,7 @@ const BreakSite = createGlobalStyle`
   }
  }
 
-  * {
+  div {
     animation: 17s rotate linear infinite, 7s scale linear infinite;
   }
 `;
