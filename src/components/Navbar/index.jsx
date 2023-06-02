@@ -1,43 +1,22 @@
-import React from "react";
-import LogoBde from "../../assets/img/logo-bde.jpg";
+import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { NavLink } from "react-router-dom";
-import Menu from "./Menu";
-import routes from "../../routes/routes";
 import colors from "../../assets/colors";
+import LargeNavbar from "./LargeNavbar";
+import MobileNavbar from "./MobileNavbar";
+import { navLinks } from "../../routes/routes";
 
 const Navbar = ({ color }) => {
-  const links = [
-    {
-      name: "Accueil",
-      route: routes.accueil,
-    },
-    {
-      name: "Clubs et Associations",
-      route: routes.clubsAssos,
-    },
-    {
-      name: "Informations Pratiques",
-      children: [
-        {
-          name: "Ne pas oublier",
-          route: routes.nePasOublier,
-        },
-        {
-          name: "Vivre à Strasbourg",
-          route: routes.vivreAStrasbourg,
-        },
-        {
-          name: "Vivre à TPS",
-          route: routes.vivreATPS,
-        },
-      ],
-    },
-  ];
   const theme = {
     background: colors.backgroundDark,
     selected: colors.primary,
   };
+
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
 
   if (color === "transparent") {
     theme.background = "transparent";
@@ -45,89 +24,46 @@ const Navbar = ({ color }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <LogoContainer>
-          <Logo src={LogoBde} alt="logo-bde" />
-          <LogoTitle>BDE</LogoTitle>
-        </LogoContainer>
-        <LinkList>
-          {links.map((link, key) =>
-            link.children ? (
-              <Menu name={link.name} children={link.children} key={key} />
-            ) : (
-              <LinkContainer to={link.route.path} key={key}>
-                <LinkLabel>{link.name}</LinkLabel>
-              </LinkContainer>
-            )
-          )}
-        </LinkList>
-        <div></div>
-      </Container>
+      {window.innerWidth < 1024 ? (
+        <MobileNavbar links={navLinks} />
+      ) : (
+        <LargeNavbar links={navLinks} />
+      )}
     </ThemeProvider>
   );
 };
 
-const Container = styled.nav`
+export const Container = styled.nav`
   position: fixed;
   top: 0;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   background-color: ${(props) => props.theme.background};
   padding: 0 1rem;
   z-index: 10;
   transition: 0.2s ease-in-out;
 `;
 
-const LogoContainer = styled.div`
+export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
 `;
 
-const LogoTitle = styled.span`
+export const LogoTitle = styled.span`
   font-size: 1.4rem;
   font-weight: 800;
   color: ${(props) => props.theme.textLight};
 `;
 
-const Logo = styled.img`
+export const Logo = styled.img`
   height: 50px;
   aspect-ratio: 1/1;
   margin: 10px 0;
   border-radius: 100%;
-`;
-
-const LinkList = styled.div`
-  display: flex;
-  font-weight: 600;
-  font-size: 1.2rem;
-  gap: 25px;
-`;
-
-const LinkLabel = styled.span`
-  position: relative;
-  margin: 10px 0;
-  padding: 10px 0;
-  transition: 0.2s ease-in-out;
-  color: ${(props) => props.theme.textLight};
-  border-bottom: solid ${(props) => props.theme.textLight} 0;
-`;
-
-const LinkContainer = styled(NavLink)`
-  display: flex;
-  align-items: center;
-
-  &:hover ${LinkLabel} {
-    color: ${(props) => props.theme.selected};
-    border-color: ${(props) => props.theme.selected};
-  }
-
-  &.active ${LinkLabel} {
-    border-width: 1px;
-  }
 `;
 
 export default Navbar;

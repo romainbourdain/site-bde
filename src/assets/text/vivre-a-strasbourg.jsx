@@ -2,7 +2,6 @@ import Header from "../img/vivre-a-strasbourg/header.jpeg";
 import Transports from "../img/vivre-a-strasbourg/transports.jpg";
 import LogoCts from "../img/vivre-a-strasbourg/logo-cts.png";
 import Crous from "../img/vivre-a-strasbourg/crous.png";
-import Logement from "../img/vivre-a-strasbourg/logement.png";
 
 const vivreAStrasbourgText = {
   header: {
@@ -99,7 +98,6 @@ const vivreAStrasbourgText = {
   },
   logement: {
     title: "Logement",
-    img: Logement,
     paragraph: (
       <>
         <p>

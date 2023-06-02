@@ -25,7 +25,7 @@ const Container = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.primary};
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   padding: 100px 10vw;
 `;

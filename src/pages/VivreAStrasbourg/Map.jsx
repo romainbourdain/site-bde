@@ -80,6 +80,11 @@ const Container = styled.div`
   .leaflet-container {
     height: 700px;
     z-index: 0;
+
+    @media (max-width: 1024px) {
+      height: auto;
+      aspect-ratio: 1/1;
+    }
   }
 `;
 

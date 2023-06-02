@@ -16,6 +16,7 @@ const colors = {
   integration: "#ffdb9d",
 
   vivreAStrasbourg: "#CD4242",
+  vivreATps: "#367CBC",
 
   black: "#000000",
   white: "#ffffff",
