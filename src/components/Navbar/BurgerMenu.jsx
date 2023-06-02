@@ -24,7 +24,6 @@ const Container = styled.div`
   bottom: 0;
   right: 0;
   background-color: ${(props) => props.theme.backgroundDark};
-  opacity: 0.8;
   z-index: -1;
   transform: translateY(100%);
   opacity: 0;
@@ -37,7 +36,7 @@ const Container = styled.div`
   align-items: center;
 
   &.active {
-    opacity: 1;
+    opacity: 0.8;
     visibility: visible;
   }
 `;

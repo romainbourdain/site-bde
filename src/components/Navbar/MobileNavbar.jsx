@@ -37,6 +37,7 @@ const BurgerBtn = styled(FontAwesomeIcon)`
   color: ${(props) => props.theme.textLight};
   font-size: 2rem;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 
   &.active {
     transform: rotate(90deg);
