@@ -12,7 +12,7 @@ const Home = () => {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
 
   const changeBackground = () => {
-    if (window.scrollY >= 150) {
+    if (window.scrollY >= 500) {
       setTransparentNavbar(false);
     } else {
       setTransparentNavbar(true);
