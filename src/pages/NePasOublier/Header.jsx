@@ -7,12 +7,21 @@ import nePasOublierText from "../../assets/text/ne-pas-oublier";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Title1 from "../../components/Titles/Title1";
 import colors from "../../assets/colors";
+import musicFile from "../../animations/music.mp3";
 
 export const Header = () => {
   useEffect(() => {
     console.log("Clique sur l'icone de la carte");
   }, []);
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const music = new Audio(musicFile);
+
+    if (count >= 10) {
+      music.play();
+    }
+  }, [count]);
 
   const handleClick = () => {
     console.log("encore");
