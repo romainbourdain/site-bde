@@ -11,7 +11,7 @@ const accueilText = {
   },
   presentation: [
     {
-      title: "Bienvenu à TPS !",
+      title: "Bienvenue à TPS !",
       paragraph: (
         <p>
           Que tu sois déjà un futur élève de TPS (Telecom Physique Strasbourg)
