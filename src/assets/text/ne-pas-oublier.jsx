@@ -113,7 +113,7 @@ const nePasOublierText = {
           <p>
             Pour le WEI (Weekend d'intégration), il faut un{" "}
             <strong>sac de couchage</strong>, une paire de{" "}
-            <strong>chaussures de marche</strong> et des{" "}
+            <strong>chaussures de sport</strong> et des{" "}
             <strong>vêtements de rechange salissables</strong> (pour rester au
             sec)
           </p>
@@ -141,7 +141,7 @@ const nePasOublierText = {
         icon: faBowlFood,
         paragraph: (
           <p>
-            Un <strong>met de ta région</strong>, une{" "}
+            Un <strong>mets de ta région</strong>, une{" "}
             <strong>spécialité locale</strong> (pour partager ta culture avec
             les autres lors de la soirée inter-région...)
           </p>

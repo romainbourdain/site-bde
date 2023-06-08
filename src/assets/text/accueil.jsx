@@ -16,7 +16,7 @@ const accueilText = {
         <p>
           Que tu sois déjà un futur élève de TPS (Telecom Physique Strasbourg)
           ou que tu n’aies jamais entendu parler de cette école avant
-          aujourd’hui, bienvenu !
+          aujourd’hui, bienvenue !
         </p>
       ),
       image: Img1,
@@ -51,7 +51,7 @@ const accueilText = {
           <li>
             Assurer l’intégration et aider chaque étudiant à trouver sa place.
           </li>
-          <li>Gestion du foyer étudiant et de sont bar.</li>
+          <li>gestion du fouaille et de son bar.</li>
         </p>
       ),
       image: Img2,
@@ -61,7 +61,7 @@ const accueilText = {
       paragraph: (
         <p>
           Alors, Convaincu ? En tout cas si tu as des questions n’hésite pas à
-          les poser sur la page des Admissible Télécom Physique Strasbourg 2022
+          les poser sur la page des Admissibles Télécom Physique Strasbourg 2023
           , on se fera un plaisir d’y répondre !
         </p>
       ),

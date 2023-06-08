@@ -67,7 +67,7 @@ const members = [
   },
   {
     name: "Enzo",
-    role: "Chti",
+    role: "Tech",
     image: Enzo,
   },
 

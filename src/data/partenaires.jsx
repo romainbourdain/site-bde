@@ -78,17 +78,10 @@ const partenaires = [
     name: "Endurance Shop",
     img: EnduranceShop,
     description: (
-      <p>Menu étudiant tous les jours y compris les soirs et week-ends</p>
-    ),
-  },
-  {
-    name: "Les Burgers de Papa",
-    img: BurgersPapa,
-    description: (
-      <p>
-        10% de réduction sur tout le textile et chaussures ainsi que 5% sur
-        l’alimentation et l’électronique
-      </p>
+        <p>
+            10% de réduction sur tout le textile et chaussures ainsi que 5% sur
+            l’alimentation et l’électronique
+        </p>
     ),
   },
   {
