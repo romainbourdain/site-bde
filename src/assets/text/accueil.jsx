@@ -75,11 +75,11 @@ const accueilText = {
   figures: {
     adherents: {
       title: "Adhérents",
-      number: 400,
+      number: 386,
     },
     clubsAssos: {
       title: "Clubs et Associations",
-      number: 40,
+      number: 36,
     },
   },
   trombinoscope: {
