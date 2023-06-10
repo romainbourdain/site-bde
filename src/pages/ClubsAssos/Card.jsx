@@ -3,11 +3,17 @@ import styled from "styled-components";
 import Reveal from "../../animations/Reveal";
 import undefinedLogo from "../../assets/img/undefined_logo.png";
 
-const Card = ({ img, name, fullname }) => {
+const Card = ({ img, name, fullname, onClick }) => {
   return (
     <Reveal>
-      <Container>
-        <Logo src={img || undefinedLogo} alt={`logo-${name}`} />
+      <Container onClick={onClick}>
+        <Logo
+          src={img || undefinedLogo}
+          alt={`logo-${name}`}
+          onError={(e) => {
+            e.target.src = undefinedLogo;
+          }}
+        />
         <TextContainer>
           <Name>{name}</Name>
           <FullName>{fullname}</FullName>
@@ -60,16 +66,16 @@ const Name = styled.h1`
 const FullName = styled.h2`
   color: ${(props) => props.theme.textDarkSecondary};
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center;
   transition: 0.4s ease-in-out;
 
   @media (max-width: 1100px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 750px) {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 `;
 
@@ -79,7 +85,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 30px 20px;
-  gap: 30px;
+  gap: 20px;
 
   width: 280px;
   height: 280px;

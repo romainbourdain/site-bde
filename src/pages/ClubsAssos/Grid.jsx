@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import styled from "styled-components";
 
-const Grid = ({ data }) => {
+const Grid = ({ data, setShowPopup }) => {
   return (
     <StyledGrid>
       {data?.map((entry, key) => {
@@ -14,6 +14,7 @@ const Grid = ({ data }) => {
             fullname={fullname}
             img={entry.logo_link}
             key={key}
+            onClick={() => setShowPopup(entry.id)}
           />
         );
       })}
