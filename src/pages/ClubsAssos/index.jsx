@@ -6,8 +6,12 @@ import Card from "./Card";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
 import Title1 from "../../components/Titles/Title1";
+import useFetch from "../../hooks/useFetch";
 
 const ClubsAssos = () => {
+  // const { res, error, isLoading } = useFetch(
+  //   "https://fouaille.bde-tps.fr/api/organization/index/small"
+  // );
   return (
     <>
       <Navbar />

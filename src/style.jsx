@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import colors from "./assets/colors";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -6,6 +7,23 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
 
+        &::selection {
+          background: ${colors.primary};
+          color: ${colors.white};
+        } 
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: ${colors.grey};
+          border-radius: 20px;
+        }
     }
     
     body {

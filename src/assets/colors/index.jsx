@@ -19,6 +19,7 @@ const colors = {
   vivreATps: "#367CBC",
 
   black: "#000000",
+  grey: "#424242",
   white: "#ffffff",
 };
 
