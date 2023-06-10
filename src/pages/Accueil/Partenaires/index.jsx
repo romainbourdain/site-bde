@@ -16,6 +16,7 @@ const Partenaires = () => {
     spaceBetween: 50,
     autoplay: { delay: 5000, disableOnInteraction: true },
     navigation: true,
+    loop: true,
     modules: [Navigation, Autoplay],
     breakpoints: {
       1400: {

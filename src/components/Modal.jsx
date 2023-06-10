@@ -39,8 +39,10 @@ const PopupStyle = createGlobalStyle`
   }
 }
     .popup-content {
-        border-radius: 60px;
+        border-radius: 20px;
         animation: zoom 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+        max-height: 80vh;
+        overflow-y: scroll;
 
         @media (max-width: 1050px) {
             width: 70vw;
@@ -54,27 +56,27 @@ const PopupStyle = createGlobalStyle`
 
 const Container = styled.div`
   padding: 50px 3vw;
-  font-size: 1.7rem;
   color: ${(props) => props.theme.textDark};
   display: flex;
   flex-direction: column;
   gap: 50px;
 
   p {
+    font-size: 1.7rem;
     margin-bottom: 1rem;
-  }
 
-  @media (max-width: 1200px) {
-    font-size: 1.5rem;
-  }
+    @media (max-width: 1200px) {
+      font-size: 1.5rem;
+    }
 
-  @media (max-width: 800px) {
-    font-size: 1.3rem;
-    gap: 30px;
-  }
+    @media (max-width: 800px) {
+      font-size: 1.3rem;
+      gap: 30px;
+    }
 
-  @media (max-width: 600px) {
-    font-size: 1.1rem;
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
+    }
   }
 `;
 

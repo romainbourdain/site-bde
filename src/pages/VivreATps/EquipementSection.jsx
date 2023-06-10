@@ -12,8 +12,8 @@ const EquipementSection = () => {
       <Title1>{vivreATpsText.equipements.title}</Title1>
       <Grid>
         {vivreATpsText.equipements.items.map((item, index) => (
-          <Reveal>
-            <Card key={index}>
+          <Reveal key={index}>
+            <Card>
               <FontAwesomeIcon icon={item.icon} />
               <p>{item.title}</p>
             </Card>

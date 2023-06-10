@@ -1,20 +1,7 @@
-import EVS from "../assets/img/partenaires/evs.png";
-import SocieteGenerale from "../assets/img/partenaires/societe-generale.png";
-import Flams from "../assets/img/partenaires/flams.png";
-import LibrairiesKleber from "../assets/img/partenaires/librairies-kleber.png";
-import EnduranceShop from "../assets/img/partenaires/endurance-shop.png";
-import BurgersPapa from "../assets/img/partenaires/burgers-papa.png";
-import BodyHit from "../assets/img/partenaires/bodyhit.png";
-import PtitsCochons from "../assets/img/partenaires/3-ptits-cochons.png";
-import Auchan from "../assets/img/partenaires/auchan.png";
-import PressTaBiere from "../assets/img/partenaires/press-ta-biere.png";
-import ReussiteToeic from "../assets/img/partenaires/reussite-toeic.png";
-import DeliriumCafe from "../assets/img/partenaires/delirium-cafe.png";
-
 const partenaires = [
   {
     name: "En voiture Simone",
-    img: EVS,
+    img: require("../assets/img/partenaires/evs.png"),
     description: (
       <p>
         Code promo <strong>TPSTRASBOURG</strong> d’une valeur de 50€ sur le prix
@@ -24,7 +11,7 @@ const partenaires = [
   },
   {
     name: "Flam's",
-    img: Flams,
+    img: require("../assets/img/partenaires/flams.png"),
     description: (
       <>
         <p>Il est impératif de réserver avant pour bénéficier des offres</p>
@@ -58,7 +45,7 @@ const partenaires = [
   },
   {
     name: "Société Générale",
-    img: SocieteGenerale,
+    img: require("../assets/img/partenaires/societe-generale.png"),
     description: (
       <p>
         <p>80 € à l’ouverture de compte d’un 1er compte bancaire SG</p>
@@ -71,22 +58,22 @@ const partenaires = [
   },
   {
     name: "Librairies Kleber",
-    img: LibrairiesKleber,
+    img: require("../assets/img/partenaires/librairies-kleber.png"),
     description: <p>5% de réductions sur la librairie</p>,
   },
   {
     name: "Endurance Shop",
-    img: EnduranceShop,
+    img: require("../assets/img/partenaires/endurance-shop.png"),
     description: (
-        <p>
-            10% de réduction sur tout le textile et chaussures ainsi que 5% sur
-            l’alimentation et l’électronique
-        </p>
+      <p>
+        10% de réduction sur tout le textile et chaussures ainsi que 5% sur
+        l’alimentation et l’électronique
+      </p>
     ),
   },
   {
     name: "BodyHit",
-    img: BodyHit,
+    img: require("../assets/img/partenaires/bodyhit.png"),
     description: (
       <p>
         Accès au tarifs partenaires pour les séances coaching Pack offert lors
@@ -96,7 +83,7 @@ const partenaires = [
   },
   {
     name: "3 Ptits Cochons",
-    img: PtitsCochons,
+    img: require("../assets/img/partenaires/3-ptits-cochons.png"),
     description: (
       <p>
         10% de réduction sur tous les produits des deux magasin dans Strasbourg
@@ -107,7 +94,7 @@ const partenaires = [
   },
   {
     name: "Press ta Bière",
-    img: PressTaBiere,
+    img: require("../assets/img/partenaires/press-ta-biere.png"),
     description: (
       <p>
         5% de réduction sur l’ensemble des produits des deux boutiques dans
@@ -117,7 +104,7 @@ const partenaires = [
   },
   {
     name: "Réussite Toeic",
-    img: ReussiteToeic,
+    img: require("../assets/img/partenaires/reussite-toeic.png"),
     description: (
       <p>
         <li>
@@ -136,7 +123,7 @@ const partenaires = [
   },
   {
     name: "Auchan",
-    img: Auchan,
+    img: require("../assets/img/partenaires/auchan.png"),
     description: (
       <p>
         10% de réduction sur tout le magasin sur présentation de la carte
@@ -146,7 +133,7 @@ const partenaires = [
   },
   {
     name: "Délirium",
-    img: DeliriumCafe,
+    img: require("../assets/img/partenaires/delirium-cafe.png"),
     description: (
       <p>
         <li>la Pils 50cl à 4€</li>

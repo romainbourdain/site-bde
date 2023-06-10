@@ -49,7 +49,7 @@ const Container = styled.div`
   padding: 110px 110px;
 
   @media (max-width: 1100px) {
-    padding: 80px 50px;
+    padding: 80px 3vw;
     ${Title1} {
       font-size: 2.3rem;
     }

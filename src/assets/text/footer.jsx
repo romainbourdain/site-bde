@@ -103,7 +103,7 @@ const footerText = {
     title: "Contactez nous !",
     icons: [
       {
-        url: "mailto:contact@bde-tps.fr",
+        url: "mailto:bdetps@gmail.com",
         icon: faEnvelope,
       },
       {
