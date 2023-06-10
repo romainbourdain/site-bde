@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Reveal from "../../animations/Reveal";
+import undefinedLogo from "../../assets/img/undefined_logo.png";
 
 const Card = ({ img, name, fullname }) => {
   return (
     <Reveal>
       <Container>
-        <Logo src={img} alt={`logo-${name}`} />
+        <Logo src={img || undefinedLogo} alt={`logo-${name}`} />
         <TextContainer>
           <Name>{name}</Name>
           <FullName>{fullname}</FullName>
