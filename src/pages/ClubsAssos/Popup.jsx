@@ -177,15 +177,29 @@ const SocialNetworks = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 `;
 
 const Icon = styled(FontAwesomeIcon)`
   color: ${colors.black};
   font-size: 3rem;
   transition: 0.2s ease-in-out;
+  padding: 2rem;
+  border: 1px solid #878787;
+  border-radius: 10px;
 
   &:hover {
     color: ${(props) => props.theme.primary};
+  }
+
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+    padding: 1rem;
   }
 `;
 
