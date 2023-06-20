@@ -12,7 +12,7 @@ import Popup from "./Popup";
 const ClubsAssos = () => {
   const [showPopup, setShowPopup] = useState(-1);
   const { res, error, isLoading } = useFetch(
-    "https://fouaille.bde-tps.fr/api/organization/index/small"
+    "https://fouaille.bde-tps.fr/api/organization"
   );
   if (isLoading || !res) return <Loader />;
   if (error) console.log(error);

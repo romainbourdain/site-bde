@@ -12,7 +12,7 @@ const Grid = ({ data, setShowPopup }) => {
           <Card
             name={name}
             fullname={fullname}
-            img={entry.logo_link}
+            img={entry.logo_url}
             key={key}
             onClick={() => setShowPopup(entry.id)}
           />

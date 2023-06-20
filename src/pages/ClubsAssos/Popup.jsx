@@ -19,7 +19,7 @@ import {
 
 const Popup = ({ id, setShow }) => {
   const { res, error, isLoading } = useFetch(
-    `https://fouaille.bde-tps.fr/api/organization/show/${id}`
+    `https://fouaille.bde-tps.fr/api/organization/${id}`
   );
   if (error) {
     console.error(error);
