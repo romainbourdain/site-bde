@@ -1,44 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
-import data from "../../data/clubs-assos.json";
 import clubsAssosText from "../../assets/text/clubs-assos";
-import Card from "./Card";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
 import Title1 from "../../components/Titles/Title1";
 import useFetch from "../../hooks/useFetch";
+import Loader from "../../animations/Loader";
+import Grid from "./Grid";
+import Popup from "./Popup";
 
 const ClubsAssos = () => {
-  // const { res, error, isLoading } = useFetch(
-  //   "https://fouaille.bde-tps.fr/api/organization/index/small"
-  // );
+  const [showPopup, setShowPopup] = useState(-1);
+  const { res, error, isLoading } = useFetch(
+    "https://fouaille.bde-tps.fr/api/organization/index/small"
+  );
+  if (isLoading || !res) return <Loader />;
+  if (error) console.log(error);
   return (
     <>
       <Navbar />
       <Container>
         <Title1>{clubsAssosText.associationTitle}</Title1>
-        <Grid>
-          {data.associations.map((association, key) => (
-            <Card
-              name={association.name}
-              fullname={association.fullname}
-              img={association.img}
-              key={key}
-            />
-          ))}
-        </Grid>
+        <Grid data={res.data.associations} setShowPopup={setShowPopup} />
         <Title1>{clubsAssosText.clubsTitle}</Title1>
-        <Grid>
-          {data.clubs.map((club, key) => (
-            <Card
-              name={club.name}
-              fullname={club.fullname}
-              img={club.img}
-              key={key}
-            />
-          ))}
-        </Grid>
+        <Grid data={res.data.clubs} setShowPopup={setShowPopup} />
       </Container>
+      {showPopup !== -1 && <Popup id={showPopup} setShow={setShowPopup} />}
       <Footer />
     </>
   );
@@ -58,15 +45,6 @@ const Container = styled.div`
       font-size: 2.3rem;
     }
   }
-`;
-
-const Grid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 100px;
-  -webkit-user-drag: none;
 `;
 
 export default ClubsAssos;
