@@ -6,8 +6,8 @@ const Grid = ({ data, setShowPopup }) => {
   return (
     <StyledGrid>
       {data?.map((entry, key) => {
-        const name = entry.slug?.toUpperCase() || entry.name;
-        const fullname = entry.slug && entry.name;
+        const name = entry.short_name?.toUpperCase() || entry.name;
+        const fullname = entry.short_name && entry.name;
         return (
           <Card
             name={name}
