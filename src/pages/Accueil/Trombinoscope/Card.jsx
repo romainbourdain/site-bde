@@ -1,16 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import {useColors} from "../../../contexts/ColorsContext";
 
-const Card = ({ img, prenom, role }) => {
-  return (
-    <Container>
-      <Image src={img} alt={prenom} />
-      <Hover>
-        <Name>{prenom}</Name>
-        <Role>{role}</Role>
-      </Hover>
-    </Container>
-  );
+const Card = ({img, prenom, role, setSelected, index}) => {
+    const {setNegative} = useColors();
+    return (
+        <Container onClick={() => setSelected((l) => {
+            l[index] = true;
+            if (l.every((e) => e)) setNegative(true)
+            return l;
+        })}>
+            <Image src={img} alt={prenom}/>
+            <Hover>
+                <Name>{prenom}</Name>
+                <Role>{role}</Role>
+            </Hover>
+        </Container>
+    );
 };
 
 const Hover = styled.div`
@@ -23,11 +29,9 @@ const Hover = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background: radial-gradient(
-    74.04% 59.92% at 50% 50%,
-    rgba(0, 0, 0, 0.336) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background: radial-gradient(74.04% 59.92% at 50% 50%,
+  rgba(0, 0, 0, 0.336) 0%,
+  rgba(0, 0, 0, 0.8) 100%);
   color: ${(props) => props.theme.textLight};
   padding: 30px;
   opacity: 0;
@@ -63,5 +67,6 @@ const Role = styled.span`
     font-size: 1.5rem;
   }
 `;
+
 
 export default Card;

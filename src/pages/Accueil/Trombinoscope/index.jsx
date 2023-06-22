@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import Card from "./Card";
 import Title1 from "../../../components/Titles/Title1";
@@ -6,21 +6,25 @@ import accueilText from "../../../assets/text/accueil";
 import members from "../../../data/membresBde";
 
 const Trombinoscope = () => {
-  return (
-    <Container>
-      <Title1>{accueilText.trombinoscope.title}</Title1>
-      <Grid>
-        {members.map((member, key) => (
-          <Card
-            img={member.image}
-            prenom={member.name}
-            role={member.role}
-            key={key}
-          />
-        ))}
-      </Grid>
-    </Container>
-  );
+    const [, setSelected] = useState(new Array(members.length).fill(false));
+
+    return (
+        <Container>
+            <Title1>{accueilText.trombinoscope.title}</Title1>
+            <Grid>
+                {members.map((member, key) => (
+                    <Card
+                        img={member.image}
+                        prenom={member.name}
+                        role={member.role}
+                        key={key}
+                        index={key}
+                        setSelected={setSelected}
+                    />
+                ))}
+            </Grid>
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -52,9 +56,12 @@ const Grid = styled.div`
     & > :nth-child(1) {
       grid-column: 4/10;
     }
+
     & > :nth-child(n + 2) {
       grid-column: span 6;
     }
   }
 `;
+
+
 export default Trombinoscope;

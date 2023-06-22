@@ -1,43 +1,58 @@
-import { createGlobalStyle } from "styled-components";
+import {createGlobalStyle} from "styled-components";
 import colors from "./assets/colors";
 
-const GlobalStyle = createGlobalStyle`
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+import React from 'react';
+import {useColors} from "./contexts/ColorsContext";
 
-        &::selection {
-          background: ${colors.primary};
-          color: ${colors.white};
-        } 
+const GlobalStyle = () => {
+    const {negative} = useColors();
+    return (
+        <>
+            <Styles/>
+            {negative && <Negative/>}
+        </>
+    );
+};
 
-        &::-webkit-scrollbar {
-          width: 10px;
-        }
 
-        &::-webkit-scrollbar-track {
-          background-color: transparent;
-        }
+const Styles = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-        &::-webkit-scrollbar-thumb {
-          background-color: ${colors.grey};
-          border-radius: 20px;
-        }
-    }
-    
-    body {
-        background-color: ${({ theme }) => theme.backgroundLight};
-        color: ${({ theme }) => theme.textDark};
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
-        overflow-x: hidden;
+    &::selection {
+      background: ${colors.primary};
+      color: ${colors.white};
     }
 
-    a {
-        text-decoration: none;
+    &::-webkit-scrollbar {
+      width: 10px;
     }
 
-    p {
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${colors.grey};
+      border-radius: 20px;
+    }
+
+  }
+
+  body {
+    background-color: ${({theme}) => theme.backgroundLight};
+    color: ${({theme}) => theme.textDark};
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
     font-weight: 400;
     font-size: 1.5rem;
     color: ${(props) => props.theme.textDark};
@@ -63,5 +78,12 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 `;
+
+const Negative = createGlobalStyle`
+  * {
+    filter: invert(1);
+    --webkit-filter: invert(1);
+  }
+`
 
 export default GlobalStyle;

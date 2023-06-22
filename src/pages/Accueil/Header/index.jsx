@@ -1,60 +1,60 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import { getTime } from "../../../utils/time";
+import {getTime} from "../../../utils/time";
 import Reveal from "../../../animations/Reveal";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
 import PrimaryButton from "../../../components/Buttons/PrimaryButton";
 import Loader from "../../../animations/Loader";
 import accueilText from "../../../assets/text/accueil";
 import Video from "./Video";
 
-const Header = ({ scroll }) => {
-  const [countdown, setCountdown] = useState({
-    days: "--",
-    hours: "--",
-    minutes: "--",
-    seconds: "--",
-  });
+const Header = ({scroll, video}) => {
+    const [countdown, setCountdown] = useState({
+        days: "--",
+        hours: "--",
+        minutes: "--",
+        seconds: "--",
+    });
 
-  useEffect(() => {
-    const end = new Date(2023, 8, 5, 18, 0, 0);
-    const interval = setInterval(() => {
-      setCountdown(getTime(end - new Date()));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+    useEffect(() => {
+        const end = new Date(2023, 8, 5, 18, 0, 0);
+        const interval = setInterval(() => {
+            setCountdown(getTime(end - new Date()));
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
 
-  return (
-    <>
-      <Video />
-      <Container>
-        {countdown.days !== "--" ? (
-          <>
-            <Title>{accueilText.header.title}</Title>
+    return (
+        <>
+            <Video video={video}/>
+            <Container>
+                {countdown.days !== "--" ? (
+                    <>
+                        <Title>{accueilText.header.title}</Title>
 
-            <Grid>
-              {Object.values(countdown).map((value, index) => (
-                <Reveal key={index} delay={`${index * 0.1}s`}>
-                  <Countdown>{value}</Countdown>
-                </Reveal>
-              ))}
-              {accueilText.header.units.map((unit, index) => (
-                <Reveal key={index} delay={`${index * 0.1}s`}>
-                  <CountdownUnit>{unit}</CountdownUnit>
-                </Reveal>
-              ))}
-            </Grid>
-            <PrimaryButton onClick={scroll}>
-              {accueilText.header.button} <FontAwesomeIcon icon={faArrowDown} />
-            </PrimaryButton>
-          </>
-        ) : (
-          <Loader />
-        )}
-      </Container>
-    </>
-  );
+                        <Grid>
+                            {Object.values(countdown).map((value, index) => (
+                                <Reveal key={index} delay={`${index * 0.1}s`}>
+                                    <Countdown>{value}</Countdown>
+                                </Reveal>
+                            ))}
+                            {accueilText.header.units.map((unit, index) => (
+                                <Reveal key={index} delay={`${index * 0.1}s`}>
+                                    <CountdownUnit>{unit}</CountdownUnit>
+                                </Reveal>
+                            ))}
+                        </Grid>
+                        <PrimaryButton onClick={scroll}>
+                            {accueilText.header.button} <FontAwesomeIcon icon={faArrowDown}/>
+                        </PrimaryButton>
+                    </>
+                ) : (
+                    <Loader/>
+                )}
+            </Container>
+        </>
+    );
 };
 
 const Container = styled.div`
@@ -63,11 +63,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.5));
   gap: 80px;
 `;
 

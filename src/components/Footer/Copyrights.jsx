@@ -2,13 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import footerText from "../../assets/text/footer";
 
-const Copyrights = () => {
-  return (
-    <Container>
-      <span>{footerText.copyrights.copyright}</span>
-      <span>{footerText.copyrights.credits}</span>
-    </Container>
-  );
+const Copyrights = ({
+                        setVideo = () => {
+                        }
+                    }) => {
+    return (
+        <Container>
+            <span>{footerText.copyrights.copyright}</span>
+            <span
+                onClick={() => setVideo(require("../../assets/img/header.mp4"))}>{footerText.copyrights.credits}</span>
+        </Container>
+    );
 };
 
 const Container = styled.div`

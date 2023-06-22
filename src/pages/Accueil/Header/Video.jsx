@@ -1,13 +1,18 @@
-import React from "react";
-import VideoFile from "../../../assets/img/video-home.mp4";
+import React, {useEffect, useRef} from "react";
 import styled from "styled-components";
 
-const Video = () => {
-  return (
-    <StyledVideo autoPlay muted loop>
-      <source src={VideoFile} type="video/mp4" />
-    </StyledVideo>
-  );
+const Video = ({video}) => {
+    const videoRef = useRef();
+
+    useEffect(() => {
+        videoRef.current?.load();
+    }, [video]);
+
+    return (
+        <StyledVideo autoPlay muted loop ref={videoRef}>
+            <source src={video} type="video/mp4"/>
+        </StyledVideo>
+    );
 };
 
 const StyledVideo = styled.video`
