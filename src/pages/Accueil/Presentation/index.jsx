@@ -22,7 +22,7 @@ const Presentation = () => {
     facebook: {
       onClick: () =>
         window.open(
-          "https://www.facebook.com/groups/216640707867659/",
+          "https://www.facebook.com/groups/1748570788912258/",
           "_blank"
         ),
       icon: faArrowUpFromBracket,

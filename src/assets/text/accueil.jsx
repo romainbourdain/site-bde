@@ -60,15 +60,16 @@ const accueilText = {
       title: "Notre page Facebook",
       paragraph: (
         <p>
-          Alors, Convaincu ? En tout cas si tu as des questions n’hésite pas à
-          les poser sur la page des Admissibles Télécom Physique Strasbourg 2023
-          , on se fera un plaisir d’y répondre !
+          Tu as été accepté à Télécom Physique Strasbourg ? Félicitations !
+           Rejoins notre page Facebook "Admis 2023" pour obtenir toutes les informations 
+           relatives à la vie étudiante de l'école et te préparer au mieux pour ton entrée. 
+           Tu pourras également poser toutes tes questions !
         </p>
       ),
       image: Img4,
       button: {
         id: "facebook",
-        text: "Admissibles TPS",
+        text: "Admis TPS",
       },
     },
   ],
