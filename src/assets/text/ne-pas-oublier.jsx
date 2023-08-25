@@ -14,6 +14,7 @@ import {
   faShirt,
   faSuitcaseRolling,
   faVolleyball,
+  faGlasses,
 } from "@fortawesome/free-solid-svg-icons";
 
 const nePasOublierText = {
@@ -148,6 +149,14 @@ const nePasOublierText = {
         ),
       },
       {
+        icon: faGlasses,
+        paragraph: (
+          <p>
+              Tes meilleures <strong>lunettes</strong> de hippie pour dompter le soleil Strasbourgeois !
+          </p>
+        ),
+      },
+      {
         icon: faHatCowboy,
         paragraph: (
           <p>
@@ -155,7 +164,7 @@ const nePasOublierText = {
             amener des <strong>déguisements</strong> en tout genre !
           </p>
         ),
-      },
+      }
     ],
   },
 };
