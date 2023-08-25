@@ -14,7 +14,13 @@ const ClubsAssos = () => {
   const { res, error, isLoading } = useFetch(
     "https://fouaille.bde-tps.fr/api/organization"
   );
-  if (isLoading || !res) return <Loader />;
+  if (isLoading || !res)
+    return (
+      <>
+        <Navbar />
+        <Loader />;
+      </>
+    );
   if (error) console.log(error);
   return (
     <>

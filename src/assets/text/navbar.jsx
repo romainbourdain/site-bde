@@ -10,6 +10,7 @@ const navbarText = {
     nePasOublier: "Ne pas oublier",
     vivreAStrasbourg: "Vivre à Strasbourg",
     vivreATps: "Vivre à TPS",
+    partenaires: "Partenaires",
   },
 };
 
