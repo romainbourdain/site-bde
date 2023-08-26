@@ -45,7 +45,7 @@ const partenaires = [
   },
   {
     name: "Société Générale",
-    img: require("../assets/img/partenaires/societe-generale.png"),
+    img: require("../assets/img/partenaires/societe_generale_logo.png"),
     description: (
       <p>
         <p>80 € à l’ouverture de compte d’un 1er compte bancaire SG</p>
