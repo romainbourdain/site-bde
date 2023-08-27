@@ -84,11 +84,6 @@ const partenairesText = {
           en utilisant le code <strong>"TPS2324"</strong>
         </p>
       ),
-      conditions: (
-        <p>
-          Il faut retirer la carte emblem au foyer étudiant TPS
-        </p>
-      ),
     },
     {
       name: "Le Comptoir de Mathilde",
@@ -184,7 +179,7 @@ const partenairesText = {
       ),
       conditions: (
         <p>
-          code de réduction pour le partenaire, sous le nom de "TPS2324"
+          En utilisant le code de réduction"TPS2324"
         </p>
       ),
     },
@@ -193,12 +188,13 @@ const partenairesText = {
       logo: require("../../assets/img/partenaires/ptis_cochons_logo.png"),
       offres: (
         <p>
-          une réduction immédiate de 50 euros sur le prix du Pack Permis affiché sur le site <a href={"https://www.envoituresimone.com/"}>envoituresimone.com</a>
+          une remise de 10% sur tous les produits Les 3 Ptis Cochons et 5% sur les bières, les fûts et les tireuses à tous les étudiants appartenant au BDE TPS
+          sur présentation d'une carte membre dans les points de vente.  La remise s'applique sur tous les produits sauf les bretzels.
         </p>
       ),
       conditions: (
         <p>
-          code de réduction pour le partenaire, sous le nom de "TPS2324"
+          Présentation carte fouaille ou étudiante TPS
         </p>
       ),
     },
@@ -212,7 +208,7 @@ const partenairesText = {
       ),
       conditions: (
         <p>
-          Première utilisation = 2 euros pour le bde, aucune condition pour l'étudiant
+          Se créer un compte sur l'application
         </p>
       ),
     },
@@ -250,6 +246,48 @@ const partenairesText = {
       offres: (
         <p>
           1 euros offert sur le solde et frais de mise en relation offert pour le première abonnement partagé
+        </p>
+      ),
+    },
+    {
+      name: "Virtual Center",
+      logo: require("../../assets/img/partenaires/virtual-center-logo.png"),
+      offres: (
+        <p>
+          une réduction de 20% dans notre centre pour tous vos étudiants <a href="https://strasbourg-nord.virtual-center.com/">virtual center</a>
+        </p>
+      ),
+      conditions: (
+        <p>
+          Présentation carte fouaille ou étudiante TPS
+        </p>
+      ),
+    },
+    {
+      name: "Eco Vestiaire",
+      logo: require("../../assets/img/partenaires/eco_vestiaire_logo.png"),
+      offres: (
+        <p>
+          Adhésion « Eco acteur » offerte. Cette adhésion permet d’acheter dans la boutique de Place des Halles (ouverte du mardi au samedi de 10h à 18h30). Des articles de sport neuf à -60% et d’occasion à -80%.
+        </p>
+      ),
+      conditions: (
+        <p>
+          Présentation carte fouaille ou étudiante TPS
+        </p>
+      ),
+    },
+    {
+      name: "Librairie Kleber",
+      logo: require("../../assets/img/partenaires/logo_librarie_kleber.png"),
+      offres: (
+        <p>
+          5% de réductions sur la librairie
+        </p>
+      ),
+      conditions: (
+        <p>
+          Présentation carte fouaille ou étudiante TPS
         </p>
       ),
     },
