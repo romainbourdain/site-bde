@@ -60,13 +60,15 @@ const partenairesText = {
       logo: require("../../assets/img/partenaires/emblem_logo.png"),
       offres: (
         <p>
-          La Carte Emblem est une carte nominative et strictement personnelle permettant à son possesseur
-          de bénéficier d’avantages dans certains commerces de Strasbourg.
-          Elle sera disponible par l’intermédiaire d’une billetterie en ligne mise en place par Emblem, qui
-          permettra aux étudiants et jeunes actifs de commander et réserver leur carte en avance. La Carte sera vendue au prix public de 19,90€ TTC.                                     Cartes avec 3 types d'avantages :
-          réduction permanente chez plus de 35 partenaires
-          80 euros de cadeaux, sans conditions d'achats
-          Organisations d'événements tous les mois
+          La Carte Emblem permet de bénéficier d’avantages dans certains commerces de Strasbourg.
+          <br/>
+          <u><strong>Cette carte à 3 types d'avantages :</strong></u>
+          <ul>
+            <li>réduction permanente chez plus de 35 partenaires</li>
+            <li>80 euros de cadeaux, sans conditions d'achats</li>
+            <li>Organisations d'événements tous les mois</li>
+          </ul>
+          Elle sera disponible par l’intermédiaire d’une billetterie en ligne mise en place par Emblem au prix de 19,90€ TTC.
         </p>
       ),
       conditions: (
@@ -90,8 +92,7 @@ const partenairesText = {
       logo: require("../../assets/img/partenaires/le_comptoir_de_mathilde_logo.png"),
       offres: (
         <p>
-          Nous ferons -10% sur chaque passage en boutiques en présence de votre carte de membre de l’association
-          (Glaces et boissons inclus)
+          10 % de réduction sur chaque passage en  boutique (boissons et glaces aussi)
         </p>
       ),
       conditions: (
@@ -188,8 +189,7 @@ const partenairesText = {
       logo: require("../../assets/img/partenaires/ptis_cochons_logo.png"),
       offres: (
         <p>
-          une remise de 10% sur tous les produits Les 3 Ptis Cochons et 5% sur les bières, les fûts et les tireuses à tous les étudiants appartenant au BDE TPS
-          sur présentation d'une carte membre dans les points de vente.  La remise s'applique sur tous les produits sauf les bretzels.
+          5 % de réduction sur les bières et 10 % de réduction sur tout le reste (sauf Bretzels)
         </p>
       ),
       conditions: (
@@ -231,7 +231,7 @@ const partenairesText = {
       logo: require("../../assets/img/partenaires/virtual-center-logo.png"),
       offres: (
         <p>
-          une réduction de 20% dans notre centre pour tous vos étudiants <a href="https://strasbourg-nord.virtual-center.com/">virtual center</a>
+          une réduction de 20% sur tout le centre
         </p>
       ),
       conditions: (
@@ -250,25 +250,17 @@ const partenairesText = {
       ),
     },
     {
-      name: "Virtual Center",
-      logo: require("../../assets/img/partenaires/virtual-center-logo.png"),
-      offres: (
-        <p>
-          une réduction de 20% dans notre centre pour tous vos étudiants <a href="https://strasbourg-nord.virtual-center.com/">virtual center</a>
-        </p>
-      ),
-      conditions: (
-        <p>
-          Présentation carte fouaille ou étudiante TPS
-        </p>
-      ),
-    },
-    {
       name: "Eco Vestiaire",
       logo: require("../../assets/img/partenaires/eco_vestiaire_logo.png"),
       offres: (
         <p>
-          Adhésion « Eco acteur » offerte. Cette adhésion permet d’acheter dans la boutique de Place des Halles (ouverte du mardi au samedi de 10h à 18h30). Des articles de sport neuf à -60% et d’occasion à -80%.
+          Adhésion « Eco acteur » offerte
+          qui permet d'avoir :
+          <ul>
+            <li>60% sur les articles de sport neuf</li>
+            <li>80% sur les articles de sport d'occasion
+            </li>
+          </ul>
         </p>
       ),
       conditions: (
