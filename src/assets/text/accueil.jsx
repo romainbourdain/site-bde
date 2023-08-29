@@ -6,7 +6,7 @@ import Img4 from "../img/home/img4.jpeg";
 const accueilText = {
   header: {
     title: "Début de l'intégration dans",
-    units: ["Jour", "Heure", "Minute", "Seconde"],
+    units: ["Jours", "Heures", "Minutes", "Secondes"],
     button: "Découvrir le BDE",
   },
   presentation: [
