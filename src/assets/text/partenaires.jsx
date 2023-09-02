@@ -1,57 +1,28 @@
 const partenairesText = {
   title: "Partenaires",
   partenaires: [
-    /**{
+    {
       name: "Lydia",
       logo: require("../../assets/img/partenaires/lydia_logo.png"),
       offres: (
         <p>
-          L'application essentielle pour participer et payer à tous les évènements de TPS
-          Utiliser le code  "TPS2324" pour profiter d'avantage exclusif
+          10 euros offerts   sur ton compte Lydia
         </p>
       ),
       conditions: (
         <p>
-          Code de parrainage "TPS2324" ET activation de la carte virtuel lydia
-        </p>
-      ),
-    },**/
-    {
-      name: "Délirium",
-      logo: require("../../assets/img/partenaires/delirium-cafe.png"),
-      offres: (
-        <p>
-          Détails des tarifs réduits :
+          <u><strong>Utiliser le lien :</strong></u>
           <ul>
-            <li>La Pils 50cl à 4€</li>
-            <li>Fruit Rouge 50cl à 5€</li>
-            <li>Jagger Bombe à 5€</li>
-            <li>
-              Le verre de vin d’alsace (Riesling, Gewurtz,Rosé, Pinot Noir) à
-              2,5€
-            </li>
-            <li> Les softs (Coca, limonade, Eau Gazeuse) à 2€</li>
+            <li>Utiliser le <a href="https://lydia-app.com/site/open/dispatch/referral?code=TPS2324">lien</a> ou rentrer le code "TPS2324"</li>
+            <li>Crée ta carte virtuelle et active la sur Google pay, Apple Pay, Samsung pay</li>
           </ul>
-        </p>
-      ),
-      conditions: (
-        <p>
-          Présentation carte fouaille ou étudiante TPS ou tampon fournit par
-          l'association
-        </p>
-      ),
-    },
-    {
-      name: "Société Générale",
-      logo: require("../../assets/img/partenaires/societe_generale_logo.png"),
-      offres: (
-        <p>
-          80€ à l’ouverture de compte
-          Sobrio : 1€/an pendant 4 ans
-          Option internationale : 2€/mois
-          Assurance habitation étudiant : 6 mois offerts
-
-          Il n’y aura pas de frais de dossier pour les prêts étudiants.
+          <u><strong>Sur 90 jours :</strong></u>
+          <ul>
+            <li>Utilise ta carte Lydia 5 fois</li>
+            <li>Dans 5 commerce différents</li>
+            <li>5€ minimum pour chaque paiement</li>
+          </ul>
+          Bravo, tu viens de te faire 10 euros !
         </p>
       ),
     },
@@ -78,6 +49,25 @@ const partenairesText = {
       ),
     },
     {
+      name: "Société Générale",
+      logo: require("../../assets/img/partenaires/societe_generale_logo.png"),
+      offres: (
+        <p>
+          80€ à l’ouverture de compte
+          Sobrio : 1€/an pendant 4 ans
+          Option internationale : 2€/mois
+          Assurance habitation étudiant : 6 mois offerts
+
+          Il n’y aura pas de frais de dossier pour les prêts étudiants.
+        </p>
+      ),
+      conditions: (
+        <p>
+          à la création du compte informer votre interlocuteur que vous venez de l'école partenaires Telecom physique Strasbourg.
+        </p>
+      ),
+    },
+    {
       name: "Bolt",
       logo: require("../../assets/img/partenaires/logo_bolt.png"),
       offres: (
@@ -88,11 +78,45 @@ const partenairesText = {
       ),
     },
     {
-      name: "Le Comptoir de Mathilde",
-      logo: require("../../assets/img/partenaires/le_comptoir_de_mathilde_logo.png"),
+      name: "Nono",
+      logo: require("../../assets/img/partenaires/logo-nono.png"),
       offres: (
         <p>
-          10 % de réduction sur chaque passage en  boutique (boissons et glaces aussi)
+          Station de 6 batteries disponible au fouaille
+        </p>
+      ),
+      conditions: (
+        <p>
+          Se créer un compte sur l'application
+        </p>
+      ),
+    },
+    {
+      name: "En Voiture Simone",
+      logo: require("../../assets/img/partenaires/en-voiture-simone-logo.png"),
+      offres: (
+        <p>
+          une réduction immédiate de 50 euros sur le prix du Pack Permis affiché sur le site <a href={"https://www.envoituresimone.com/"}>envoituresimone.com</a>
+        </p>
+      ),
+      conditions: (
+        <p>
+          En utilisant le code de réduction"TPS2324"
+        </p>
+      ),
+    },
+    {
+      name: "Eco Vestiaire",
+      logo: require("../../assets/img/partenaires/eco_vestiaire_logo.png"),
+      offres: (
+        <p>
+          Adhésion « Eco acteur » offerte
+          qui permet d'avoir :
+          <ul>
+            <li>60% sur les articles de sport neuf</li>
+            <li>80% sur les articles de sport d'occasion
+            </li>
+          </ul>
         </p>
       ),
       conditions: (
@@ -102,26 +126,59 @@ const partenairesText = {
       ),
     },
     {
-      name: "TMZ Coiffure",
-      logo: require("../../assets/img/partenaires/tmz.png"),
+      name: "Auchan",
+      logo: require("../../assets/img/partenaires/Auchan-Logo.png"),
       offres: (
         <p>
-          La coiffure Homme passe de 17€ à 15€
+          10% de réduction sur tout le magasin
         </p>
       ),
       conditions: (
         <p>
-          Présentation carte fouaille ou étudiante TPS
+          Présentation carte étudiante de l' université et de la carte Auchan
         </p>
       ),
     },
     {
-      name: "Tchungle",
-      logo: require("../../assets/img/partenaires/tchungle_logo.png"),
+      name: "Spliiit",
+      logo: require("../../assets/img/partenaires/logo-spliiit.png"),
       offres: (
         <p>
-          5 % de réduction en dessous de 30 euros
-          10 % de réduction au dessus de 30 euros
+          1 euros offert sur le solde et frais de mise en relation offert pour le première abonnement partagé
+        </p>
+      ),
+    },
+    {
+      name: "Délirium",
+      logo: require("../../assets/img/partenaires/delirium-cafe.png"),
+      offres: (
+        <p>
+          Détails des tarifs réduits :
+          <ul>
+            <li>La Pils 50cl à 4€</li>
+            <li>Fruit Rouge 50cl à 5€</li>
+            <li>Jagger Bombe à 5€</li>
+            <li>
+              Le verre de vin d’alsace (Riesling, Gewurtz,Rosé, Pinot Noir) à
+              2,5€
+            </li>
+            <li> Les softs (Coca, limonade, Eau Gazeuse) à 2€</li>
+          </ul>
+        </p>
+      ),
+      conditions: (
+        <p>
+          Présentation carte fouaille ou étudiante TPS ou tampon fournit par
+          l'association
+        </p>
+      ),
+    },
+    {
+      name: "Les 3 Ptits Cochons",
+      logo: require("../../assets/img/partenaires/ptis_cochons_logo.png"),
+      offres: (
+        <p>
+          5 % de réduction sur les bières et 10 % de réduction sur tout le reste (sauf Bretzels)
         </p>
       ),
       conditions: (
@@ -171,25 +228,12 @@ const partenairesText = {
       ),
     },
     {
-      name: "En Voiture Simone",
-      logo: require("../../assets/img/partenaires/en-voiture-simone-logo.png"),
+      name: "Tchungle",
+      logo: require("../../assets/img/partenaires/tchungle_logo.png"),
       offres: (
         <p>
-          une réduction immédiate de 50 euros sur le prix du Pack Permis affiché sur le site <a href={"https://www.envoituresimone.com/"}>envoituresimone.com</a>
-        </p>
-      ),
-      conditions: (
-        <p>
-          En utilisant le code de réduction"TPS2324"
-        </p>
-      ),
-    },
-    {
-      name: "Les 3 Ptits Cochons",
-      logo: require("../../assets/img/partenaires/ptis_cochons_logo.png"),
-      offres: (
-        <p>
-          5 % de réduction sur les bières et 10 % de réduction sur tout le reste (sauf Bretzels)
+          5 % de réduction en dessous de 30 euros
+          10 % de réduction au dessus de 30 euros
         </p>
       ),
       conditions: (
@@ -199,30 +243,30 @@ const partenairesText = {
       ),
     },
     {
-      name: "Nono",
-      logo: require("../../assets/img/partenaires/logo-nono.png"),
+      name: "TMZ Coiffure",
+      logo: require("../../assets/img/partenaires/tmz.png"),
       offres: (
         <p>
-          Station de 6 batteries disponible au fouaille
+          La coiffure Homme passe de 17€ à 15€
         </p>
       ),
       conditions: (
         <p>
-          Se créer un compte sur l'application
+          Présentation carte fouaille ou étudiante TPS
         </p>
       ),
     },
     {
-      name: "Auchan",
-      logo: require("../../assets/img/partenaires/Auchan-Logo.png"),
+      name: "Le Comptoir de Mathilde",
+      logo: require("../../assets/img/partenaires/le_comptoir_de_mathilde_logo.png"),
       offres: (
         <p>
-          10% de réduction sur tout le magasin
+          10 % de réduction sur chaque passage en  boutique (boissons et glaces aussi)
         </p>
       ),
       conditions: (
         <p>
-          Présentation carte étudiante de l' université et de la carte Auchan
+          Présentation carte fouaille ou étudiante TPS
         </p>
       ),
     },
@@ -232,35 +276,6 @@ const partenairesText = {
       offres: (
         <p>
           une réduction de 20% sur tout le centre
-        </p>
-      ),
-      conditions: (
-        <p>
-          Présentation carte fouaille ou étudiante TPS
-        </p>
-      ),
-    },
-    {
-      name: "Spliiit",
-      logo: require("../../assets/img/partenaires/logo-spliiit.png"),
-      offres: (
-        <p>
-          1 euros offert sur le solde et frais de mise en relation offert pour le première abonnement partagé
-        </p>
-      ),
-    },
-    {
-      name: "Eco Vestiaire",
-      logo: require("../../assets/img/partenaires/eco_vestiaire_logo.png"),
-      offres: (
-        <p>
-          Adhésion « Eco acteur » offerte
-          qui permet d'avoir :
-          <ul>
-            <li>60% sur les articles de sport neuf</li>
-            <li>80% sur les articles de sport d'occasion
-            </li>
-          </ul>
         </p>
       ),
       conditions: (
