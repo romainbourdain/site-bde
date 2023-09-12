@@ -18,7 +18,7 @@ const Header = ({scroll, video}) => {
     });
 
     useEffect(() => {
-        const end = new Date(2023, 8, 5, 18, 0, 0);
+        const end = new Date(2023, 8, 22, 14, 0, 0);
         const interval = setInterval(() => {
             setCountdown(getTime(end - new Date()));
         }, 1000);
