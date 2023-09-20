@@ -43,6 +43,10 @@ const routes = {
     path: "*",
     element: <Erreur />,
   },
+  challenge: {
+    id: "challenge",
+    path: "https://defi-inte.bde-tps.fr",
+  }
 };
 
 export const navLinks = [
@@ -80,6 +84,11 @@ export const navLinks = [
   {
     name: navbarText.links.partenaires,
     route: routes.partenaires,
+    type: "link",
+  },
+  {
+    name: "Défis Inté",
+    route: routes.challenge,
     type: "link",
   },
 ];
