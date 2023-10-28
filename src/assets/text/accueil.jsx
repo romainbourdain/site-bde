@@ -5,7 +5,7 @@ import Img4 from "../img/home/img4.jpeg";
 
 const accueilText = {
   header: {
-    title: "Début du WeiStock dans",
+    title: "Début de la campagne BDE dans :",
     units: ["Jours", "Heures", "Minutes", "Secondes"],
     button: "Découvrir le BDE",
   },
