@@ -5,7 +5,7 @@ import Img4 from "../img/home/img4.jpeg";
 
 const accueilText = {
   header: {
-    title: "Début de la campagne BDE dans :",
+    title: "Election nouveau BDE dans",
     units: ["Jours", "Heures", "Minutes", "Secondes"],
     button: "Découvrir le BDE",
   },
@@ -61,9 +61,9 @@ const accueilText = {
       paragraph: (
         <p>
           Tu as été accepté à Télécom Physique Strasbourg ? Félicitations !
-           Rejoins notre page Facebook "Admis 2023" pour obtenir toutes les informations 
-           relatives à la vie étudiante de l'école et te préparer au mieux pour ton entrée. 
-           Tu pourras également poser toutes tes questions !
+          Rejoins notre page Facebook "Admis 2023" pour obtenir toutes les informations
+          relatives à la vie étudiante de l'école et te préparer au mieux pour ton entrée.
+          Tu pourras également poser toutes tes questions !
         </p>
       ),
       image: Img4,
