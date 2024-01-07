@@ -11,6 +11,7 @@ const navbarText = {
     vivreAStrasbourg: "Vivre à Strasbourg",
     vivreATps: "Vivre à TPS",
     partenaires: "Partenaires",
+    campagne: "Campagne",
   },
 };
 

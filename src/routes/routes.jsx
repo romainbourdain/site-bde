@@ -6,6 +6,7 @@ import VivreAStrasbourg from "../pages/VivreAStrasbourg";
 import VivreATps from "../pages/VivreATps";
 import navbarText from "../assets/text/navbar";
 import Partenaires from "../pages/Partenaires";
+import Campagne from "../pages/Campagne";
 
 const routes = {
   accueil: {
@@ -42,6 +43,11 @@ const routes = {
     id: "erreur",
     path: "*",
     element: <Erreur />,
+  },
+  campagne: {
+    id: "campagne",
+    path: "/campagne",
+    element: <Campagne />,
   }
 };
 
@@ -80,6 +86,11 @@ export const navLinks = [
   {
     name: navbarText.links.partenaires,
     route: routes.partenaires,
+    type: "link",
+  },
+  {
+    name: navbarText.links.campagne,
+    route: routes.campagne,
     type: "link",
   }
 ];
