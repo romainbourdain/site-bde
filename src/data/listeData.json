@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "short_name": "ShortL1",
+        "name": "longL1",
+        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_etudiants_400.png",
+        "description": "Le Bureau des Étudiants (BDE) est une association étudiante dynamique qui joue un rôle essentiel dans la vie etudiante et anime la partie associative de l'école. En tant qu'intermédiaire entre les étudiants et l'administration, le BDE assure une communication fluide et efficace, garantissant ainsi que les besoins et les préoccupations des étudiants sont entendus et pris en compte par l'équipe administrative.",
+        "website_link": "https://bde-tps.fr",
+        "facebook_link": "https://www.facebook.com/bde.telecomps",
+        "twitter_link": null,
+        "instagram_link": "https://www.instagram.com/bdetps2023/",
+        "discord_link": null,
+        "email": "bdetps@gmail.com"
+    },
+    {
+        "id": 2,
+        "short_name": "ShortL2",
+        "name": "longL2",
+        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_etudiants_400.png",
+        "description": "Le Bureau des Étudiants (BDE) est une association étudiante dynamique qui joue un rôle essentiel dans la vie etudiante et anime la partie associative de l'école. En tant qu'intermédiaire entre les étudiants et l'administration, le BDE assure une communication fluide et efficace, garantissant ainsi que les besoins et les préoccupations des étudiants sont entendus et pris en compte par l'équipe administrative.",
+        "website_link": "https://bde-tps.fr",
+        "facebook_link": "https://www.facebook.com/bde.telecomps",
+        "twitter_link": null,
+        "instagram_link": "https://www.instagram.com/bdetps2023/",
+        "discord_link": null,
+        "email": "bdetps@gmail.com"
+    },
+    {
+        "id": 3,
+        "short_name": "ShortL3",
+        "name": "longL3",
+        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_etudiants_400.png",
+        "description": "Le Bureau des Étudiants (BDE) est une association étudiante dynamique qui joue un rôle essentiel dans la vie etudiante et anime la partie associative de l'école. En tant qu'intermédiaire entre les étudiants et l'administration, le BDE assure une communication fluide et efficace, garantissant ainsi que les besoins et les préoccupations des étudiants sont entendus et pris en compte par l'équipe administrative.",
+        "website_link": "https://bde-tps.fr",
+        "facebook_link": "https://www.facebook.com/bde.telecomps",
+        "twitter_link": null,
+        "instagram_link": "https://www.instagram.com/bdetps2023/",
+        "discord_link": null,
+        "email": "bdetps@gmail.com"
+    },
+    {
+        "id": 4,
+        "short_name": "ShortL3",
+        "name": "longL3",
+        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_etudiants_400.png",
+        "description": "Le Bureau des Étudiants (BDE) est une association étudiante dynamique qui joue un rôle essentiel dans la vie etudiante et anime la partie associative de l'école. En tant qu'intermédiaire entre les étudiants et l'administration, le BDE assure une communication fluide et efficace, garantissant ainsi que les besoins et les préoccupations des étudiants sont entendus et pris en compte par l'équipe administrative.",
+        "website_link": "https://bde-tps.fr",
+        "facebook_link": "https://www.facebook.com/bde.telecomps",
+        "twitter_link": null,
+        "instagram_link": "https://www.instagram.com/bdetps2023/",
+        "discord_link": null,
+        "email": "bdetps@gmail.com"
+    }
+]

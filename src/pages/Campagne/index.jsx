@@ -1,88 +1,29 @@
+import { useState } from "react";
+
 import Navbar from "../../components/Navbar";
 import styled from "styled-components";
 import Title1 from "../../components/Titles/Title1";
-import Grid from "../ClubsAssos/Grid"
+import Grid from "./Grid"
+import Footer from "../../components/Footer";
+import Popup from "./Popup";
+
+import listeData from "../../data/listeData.json"
 
 const Campagne = () => {
 
-  const listeData = [
-    {
-      "id": 1,
-      "short_name": "ShortL1",
-      "name": "longL1",
-      "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_etudiants_400.png",
-      "link": "https://www.google.com"
-    },
-    {
-      "id": 2,
-      "short_name": "ShortL2",
-      "name": "longL2",
-      "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_sports_400.png",
-      "link": "https://www.google.com"
-    },
-    {
-      "id": 3,
-      "short_name": "ShortL3",
-      "name": "longL3",
-      "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/physique_strasbourg_ingenieurie_400.jpeg",
-      "link": "https://www.google.com"
-    },
-    {
-      "id": 4,
-      "short_name": "ShortL3",
-      "name": "longL3",
-      "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/physique_strasbourg_ingenieurie_400.jpeg",
-      "link": "https://www.google.com"
-    }
-  ];
-
-  const HandleClick = (id) => {
-    const listeData = [
-      {
-        "id": 1,
-        "short_name": "ShortL1",
-        "name": "longL1",
-        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_etudiants_400.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "id": 2,
-        "short_name": "ShortL2",
-        "name": "longL2",
-        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/bureau_des_sports_400.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "id": 3,
-        "short_name": "ShortL3",
-        "name": "longL3",
-        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/physique_strasbourg_ingenieurie_400.jpeg",
-        "link": "https://www.google.com"
-      },
-      {
-        "id": 4,
-        "short_name": "ShortL3",
-        "name": "longL3",
-        "logo_url": "https://fouaille.bde-tps.fr/storage/images/organization_logo/physique_strasbourg_ingenieurie_400.jpeg",
-        "link": "https://www.google.com"
-      }
-    ];
-
-    const newWindow = window.open(listeData[id - 1].link);
-    if (newWindow) {
-      newWindow.focus();
-    }
-  };
-
+  const [showPopup, setShowPopup] = useState(-1);
 
   return (
     <>
       <Navbar />
       <Container>
         <Title1>Listes campagne BDE</Title1>
-        <Grid data={listeData} setShowPopup={HandleClick} />
+        <Grid data={listeData} setShowPopup={setShowPopup} />
+
+        <Title1>Calendrier campagne BDE</Title1>
       </Container >
-      <Title1>Calendrier campagne BDE</Title1>
+      {showPopup !== -1 && <Popup id={showPopup} setShow={setShowPopup} />}
+      <Footer />
     </>
   );
 };
