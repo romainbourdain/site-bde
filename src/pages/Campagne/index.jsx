@@ -19,8 +19,6 @@ const Campagne = () => {
       <Container>
         <Title1>Listes campagne BDE</Title1>
         <Grid data={listeData} setShowPopup={setShowPopup} />
-
-        <Title1>Calendrier campagne BDE</Title1>
       </Container >
       {showPopup !== -1 && <Popup id={showPopup} setShow={setShowPopup} />}
       <Footer />
